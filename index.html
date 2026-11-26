@@ -598,25 +598,7 @@
 
       <form id="login-form" class="p-6 space-y-4">
         <div>
-          <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-2">Yetki Rolü Seçin</label>
-          <div class="grid grid-cols-2 gap-2">
-            <label class="cursor-pointer">
-              <input type="radio" name="loginRole" value="admin" checked class="peer sr-only" />
-              <div class="p-3 text-center border border-sandBorder bg-white peer-checked:bg-obsidian peer-checked:text-white peer-checked:border-obsidian text-xs font-semibold transition-colors">
-                Yönetici (Tam Yetki)
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="loginRole" value="editor" class="peer sr-only" />
-              <div class="p-3 text-center border border-sandBorder bg-white peer-checked:bg-obsidian peer-checked:text-white peer-checked:border-obsidian text-xs font-semibold transition-colors">
-                Editör (Sadece Odalar)
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <div>
-          <label for="login-password" class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Şifre</label>
+          <label for="login-password" class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Yönetici Şifresi</label>
           <input id="login-password" type="password" required placeholder="••••••••" class="w-full px-4 py-3 bg-white border border-sandBorder text-sm focus:outline-none focus:border-bronze" />
         </div>
 
@@ -1585,8 +1567,6 @@
 
     document.getElementById("login-form").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const rolInput = document.querySelector('input[name="loginRole"]:checked');
-      const rol = rolInput ? rolInput.value : "admin";
       const sifre = document.getElementById("login-password").value.trim();
       const errEl = document.getElementById("login-error");
       const btn = document.getElementById("login-submit-btn");
@@ -1599,21 +1579,21 @@
         const res = await fetch("/api/giris", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ rol, sifre })
+          body: JSON.stringify({ rol: "admin", sifre })
         });
         const data = await res.json();
 
         if (res.ok && data.ok) {
-          currentUserRole = data.rol || rol;
+          currentUserRole = "admin";
           closeLoginModal();
-          openAdminDrawer(currentUserRole);
+          openAdminDrawer("admin");
           showToast("Yönetim paneli açıldı.");
         } else {
           errEl.textContent = data.mesaj || "Şifre hatalı veya yetkisiz giriş.";
           errEl.classList.remove("hidden");
         }
       } catch (err) {
-        errEl.textContent = "Sunucu doğrulaması yapılamadı. Vercel ortam değişkenlerini (ADMIN_SIFRE / EDITOR_SIFRE) ve api/giris.js dosyasını kontrol edin.";
+        errEl.textContent = "Sunucu doğrulaması yapılamadı. Vercel ortam değişkenlerinde ADMIN_SIFRE tanımını ve api/giris.js dosyasını kontrol edin.";
         errEl.classList.remove("hidden");
       } finally {
         btn.disabled = false;
@@ -1622,10 +1602,10 @@
     });
 
     // 12. YÖNETİM PANELİ ÇEKMECESİ & CANLI DÜZENLEME
-    function openAdminDrawer(role) {
-      document.getElementById("admin-role-badge").textContent = role === "admin" ? "Yönetici" : "Editör (Odalar)";
+    function openAdminDrawer() {
+      document.getElementById("admin-role-badge").textContent = "Yönetici";
       document.querySelectorAll(".admin-only-tab").forEach(tabBtn => {
-        tabBtn.classList.toggle("hidden", role !== "admin");
+        tabBtn.classList.remove("hidden");
       });
 
       populateAdminForms();
