@@ -996,13 +996,51 @@
 
     function resolveImg(filename) {
       if (!filename) return "https://placehold.co/1200x800/181C20/D8BC8C?text=Kars+Cumhuriyet+Oteli";
-      const key = String(filename).trim().toLowerCase();
+      const cleanName = String(filename).trim();
+      const key = cleanName.toLowerCase();
       if (localImageMap[key]) return localImageMap[key];
-      return filename;
+      return encodeURI(cleanName);
+    }
+
+    function buildImageCandidates(filename) {
+      const clean = String(filename || "").trim();
+      if (!clean) return [];
+      const set = new Set();
+
+      // Çift uzantıyı temizle (örn: IMG_1251.JPG.jpg -> IMG_1251)
+      const stem = clean.replace(/\.(jpe?g|png|webp)$/i, "").replace(/\.(jpe?g|png|webp)$/i, "");
+      const variants = [
+        `${stem}.JPG`,
+        `${stem}.jpg`,
+        `${stem}.jpeg`,
+        `${stem}.JPEG`,
+        `${stem.toLowerCase()}.jpg`,
+        `${stem.toLowerCase()}.jpeg`,
+        `${stem.toUpperCase()}.JPG`,
+        clean.toLowerCase(),
+        `images/${stem}.JPG`,
+        `images/${stem}.jpg`,
+        `images/${clean}`
+      ];
+
+      variants.forEach(v => {
+        if (v && v !== clean) set.add(encodeURI(v));
+      });
+      return Array.from(set);
     }
 
     window.handleImgErr = function(imgEl, filename, altText) {
       if (!imgEl || imgEl.dataset.fallbackApplied === "1") return;
+
+      const candidates = buildImageCandidates(filename);
+      const tryIdx = Number(imgEl.dataset.tryIdx || "0");
+
+      if (tryIdx < candidates.length) {
+        imgEl.dataset.tryIdx = String(tryIdx + 1);
+        imgEl.src = candidates[tryIdx];
+        return;
+      }
+
       imgEl.dataset.fallbackApplied = "1";
       imgEl.onerror = null;
       const label = encodeURIComponent(altText || filename || "Kars Cumhuriyet Oteli");
