@@ -8,30 +8,24 @@ module.exports = function handler(req, res) {
   try {
     // İstek gövdesini güvenli şekilde ayrıştır
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {});
-    const { rol, sifre } = body;
+    const { sifre } = body;
 
-    // Şifreler kaynak kodda değil, Vercel Environment Variables ayarlarında saklanır
+    // Şifre kaynak kodda değil, yalnızca Vercel Environment Variables ayarında saklanır
     const adminSifre = process.env.ADMIN_SIFRE;
-    const editorSifre = process.env.EDITOR_SIFRE;
 
-    if (!adminSifre || !editorSifre) {
+    if (!adminSifre) {
       return res.status(500).json({
         ok: false,
-        mesaj: 'Vercel Environment Variables ayarlarında ADMIN_SIFRE veya EDITOR_SIFRE tanımlı değil.'
+        mesaj: 'Vercel Environment Variables ayarında ADMIN_SIFRE tanımlı değil.'
       });
     }
 
     // Yönetici (Tam Yetki) kontrolü
-    if (rol === 'admin' && sifre === adminSifre) {
+    if (sifre === adminSifre) {
       return res.status(200).json({ ok: true, rol: 'admin' });
     }
 
-    // Alt Kullanıcı / Editör (Sadece Odalar) kontrolü
-    if (rol === 'editor' && sifre === editorSifre) {
-      return res.status(200).json({ ok: true, rol: 'editor' });
-    }
-
-    return res.status(401).json({ ok: false, mesaj: 'Girilen şifre hatalı.' });
+    return res.status(401).json({ ok: false, mesaj: 'Girilen yönetici şifresi hatalı.' });
   } catch (error) {
     return res.status(400).json({ ok: false, mesaj: 'İstek verisi işlenemedi.' });
   }
