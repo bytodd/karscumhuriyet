@@ -495,6 +495,13 @@
                 <textarea id="qc-note" rows="3" placeholder="2 Yetişkin, Doğu Ekspresi varış saati vb." class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze"></textarea>
               </div>
 
+              <label class="flex items-start gap-2.5 text-xs text-stoneText cursor-pointer select-none pt-1">
+                <input id="qc-kvkk" type="checkbox" required class="mt-0.5 w-4 h-4 accent-[#181C20] shrink-0" />
+                <span class="leading-relaxed">
+                  <button type="button" onclick="openLegalModal('kvkk')" class="text-obsidian font-semibold underline underline-offset-2 hover:text-bronzeDark">KVKK Aydınlatma Metni</button>'ni okudum, rezervasyon talebimin yanıtlanması amacıyla iletişim bilgilerimin işlenmesini onaylıyorum.
+                </span>
+              </label>
+
               <button type="submit" class="w-full py-4 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.18em] font-semibold transition-colors">
                 WhatsApp ile Rezervasyon Talebi Gönder
               </button>
@@ -507,27 +514,45 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-obsidian text-linen/80 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <div id="footer-logo-box" class="w-9 h-9 border border-bronze/60 flex items-center justify-center font-editorial text-lg font-bold text-bronzeLight overflow-hidden">
-          KC
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 space-y-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div id="footer-logo-box" class="w-9 h-9 border border-bronze/60 flex items-center justify-center font-editorial text-lg font-bold text-bronzeLight overflow-hidden">
+            KC
+          </div>
+          <div>
+            <div class="font-editorial text-xl font-semibold text-white">Kars Cumhuriyet Oteli</div>
+            <div class="text-[11px] text-linen/60">karscumhuriyetoteli.com · 1878 Baltık Mimari Mirası</div>
+          </div>
         </div>
-        <div>
-          <div class="font-editorial text-xl font-semibold text-white">Kars Cumhuriyet Oteli</div>
-          <div class="text-[11px] text-linen/60">karscumhuriyetoteli.com · 1878 Baltık Mimari Mirası</div>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-widest">
+          <a href="#hikayemiz" class="hover:text-bronzeLight">Hikayemiz</a>
+          <a href="#odalar" class="hover:text-bronzeLight">Odalar</a>
+          <a href="#galeri" class="hover:text-bronzeLight">Galeri</a>
+          <a href="#iletisim" class="hover:text-bronzeLight">İletişim</a>
+        </div>
+
+        <!-- Mobilde 5 Kez Tıklayınca Yönetim Girişini Açan Telif Yazısı -->
+        <div id="footer-copy" class="text-xs text-linen/55 select-none cursor-default">
+          © 2026 Kars Cumhuriyet Oteli · Tüm hakları saklıdır.
         </div>
       </div>
 
-      <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-widest">
-        <a href="#hikayemiz" class="hover:text-bronzeLight">Hikayemiz</a>
-        <a href="#odalar" class="hover:text-bronzeLight">Odalar</a>
-        <a href="#galeri" class="hover:text-bronzeLight">Galeri</a>
-        <a href="#iletisim" class="hover:text-bronzeLight">İletişim</a>
-      </div>
-
-      <!-- Mobilde 5 Kez Tıklayınca Yönetim Girişini Açan Telif Yazısı -->
-      <div id="footer-copy" class="text-xs text-linen/55 select-none cursor-default">
-        © 2026 Kars Cumhuriyet Oteli · Tüm hakları saklıdır.
+      <!-- Yasal Bilgilendirme & KVKK Şeridi -->
+      <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center md:justify-between gap-4 text-[11px] text-linen/60">
+        <div class="flex flex-wrap items-center justify-center gap-5">
+          <button type="button" onclick="openLegalModal('kvkk')" class="hover:text-bronzeLight transition-colors underline-offset-4 hover:underline">
+            KVKK Aydınlatma Metni
+          </button>
+          <button type="button" onclick="openLegalModal('cerez')" class="hover:text-bronzeLight transition-colors underline-offset-4 hover:underline">
+            Çerez Politikası
+          </button>
+          <button type="button" onclick="openCookieBanner(true)" class="hover:text-bronzeLight transition-colors underline-offset-4 hover:underline">
+            Çerez Tercihlerini Yönet
+          </button>
+        </div>
+        <div>6698 Sayılı Kişisel Verilerin Korunması Kanunu Kapsamında Bilgilendirme</div>
       </div>
     </div>
   </footer>
@@ -637,6 +662,7 @@
       <button type="button" data-admin-tab="tarihce" class="admin-tab-btn px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Tarihçe & SSS</button>
       <button type="button" data-admin-tab="galeri" class="admin-tab-btn px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Galeri</button>
       <button type="button" data-admin-tab="iletisim" class="admin-tab-btn px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">İletişim</button>
+      <button type="button" data-admin-tab="yasal" class="admin-tab-btn px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">KVKK & Çerez</button>
     </div>
 
     <!-- Sekme İçerikleri -->
@@ -794,64 +820,129 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Panel Alt Araç Çubuğu -->
-    <div class="p-4 bg-parchment border-t border-sandBorder space-y-2.5 shrink-0">
-      <div class="grid grid-cols-3 gap-2">
-        <button id="btn-local-preview" type="button" class="py-2.5 px-2 bg-white hover:bg-linen border border-sandBorder text-obsidian text-[11px] font-semibold flex items-center justify-center text-center">
-          <span>Fotoğraf Önizle</span>
-        </button>
-        <button id="btn-open-optimizer" type="button" class="py-2.5 px-2 bg-white hover:bg-linen border border-sandBorder text-bronzeDark text-[11px] font-semibold flex items-center justify-center text-center">
-          <span>Fotoğraf Küçült</span>
-        </button>
-        <button id="btn-logout" type="button" class="py-2.5 px-2 bg-white hover:bg-red-50 border border-sandBorder text-red-700 text-[11px] font-semibold flex items-center justify-center text-center">
-          <span>Güvenli Çıkış</span>
-        </button>
-      </div>
-
-      <button id="btn-download-json" type="button" class="w-full py-3.5 px-4 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold flex items-center justify-center gap-2">
-        <span>Kaydet ve veri.json İndir</span>
-      </button>
-
-      <p class="text-[11px] text-stoneText text-center leading-snug">
-        İndirdiğiniz <strong>veri.json</strong> dosyasını GitHub deponuza yüklediğinizde tüm ziyaretçilerde kalıcı olur.
-      </p>
-    </div>
-  </aside>
-
-  <!-- Gizli Yerel Fotoğraf Seçiciler -->
-  <input id="local-img-picker" type="file" multiple accept="image/*" class="hidden" />
-  <input id="optimizer-file-input" type="file" multiple accept="image/*" class="hidden" />
-
-  <!-- ==================== WEB FOTOĞRAF KÜÇÜLTÜCÜ MODALI ==================== -->
-  <div id="img-optimizer-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
-    <div class="w-full max-w-xl bg-linen border border-sandBorder shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
-      <div class="px-6 py-4 bg-obsidian text-linen flex items-center justify-between">
-        <div>
-          <h3 class="font-editorial text-xl font-semibold text-white">Web İçin Fotoğraf Küçültücü</h3>
-          <p class="text-[11px] text-bronzeLight mt-0.5">Dosya adlarını bozmadan 1920px genişliğe ve ~250 KB boyutuna optimize eder</p>
+      <!-- 8. KVKK & ÇEREZ POLİTİKASI SEKMESİ -->
+      <div id="tab-yasal" class="admin-tab-panel hidden space-y-4">
+        <h4 class="font-editorial text-xl font-semibold">KVKK Aydınlatma Metni & Çerez Bildirimi</h4>
+        <div class="bg-white p-4 border border-sandBorder space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Veri Sorumlusu Ticari Unvanı</label>
+            <input id="inp-legal-company" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Çerez Bildirimi Kısa Metni</label>
+            <textarea id="inp-cookie-banner-text" rows="2" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">KVKK Aydınlatma Metni (İsteğe bağlı özel metin — boşsa standart metin gösterilir)</label>
+            <textarea id="inp-kvkk-custom" rows="5" placeholder="Boş bırakırsanız Kars Cumhuriyet Oteli için hazırlanan standart 6698 sayılı KVKK metni iletişim bilgilerinizle otomatik doldurulur." class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Çerez Politikası Metni (İsteğe bağlı özel metin)</label>
+            <textarea id="inp-cookie-custom" rows="4" placeholder="Boş bırakırsanız standart Çerez Politikası metni gösterilir." class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
         </div>
-        <button id="close-optimizer-modal" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15 text-white">
+      </div>
+    </div>
+  <!-- ==================== KVKK & ÇEREZ POLİTİKASI MODALI ==================== -->
+  <div id="legal-modal" class="fixed inset-0 z-[65] hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
+    <div class="w-full max-w-3xl bg-linen border border-sandBorder shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
+      <div class="px-6 py-4 bg-obsidian text-white flex items-center justify-between shrink-0">
+        <div>
+          <h3 id="legal-modal-title" class="font-editorial text-2xl font-semibold">KVKK Aydınlatma Metni</h3>
+          <p class="text-[11px] text-bronzeLight mt-0.5">6698 Sayılı Kişisel Verilerin Korunması Kanunu & Çerez Bilgilendirmesi</p>
+        </div>
+        <button id="legal-modal-close" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15">
           <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
 
-      <div class="p-6 overflow-y-auto space-y-4">
-        <button id="btn-select-optimize-files" type="button" class="w-full py-6 border-2 border-dashed border-bronze/60 hover:border-obsidian bg-white hover:bg-parchment/40 text-center transition-colors space-y-1.5">
-          <div class="font-editorial text-xl font-semibold text-obsidian">Küçültülecek Fotoğrafları Seçin</div>
-          <p class="text-xs text-stoneText">Tüm otel fotoğraflarını (JPG, PNG, WEBP) topluca seçebilirsiniz</p>
+      <!-- Sekme Geçişi -->
+      <div class="px-6 py-3 bg-parchment border-b border-sandBorder flex items-center gap-2 shrink-0">
+        <button id="legal-tab-kvkk" type="button" onclick="openLegalModal('kvkk')" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-obsidian text-white">
+          KVKK Aydınlatma Metni
         </button>
-
-        <div id="optimizer-status" class="hidden text-xs font-semibold text-bronzeDark text-center"></div>
-        <div id="optimizer-results-list" class="space-y-2"></div>
+        <button id="legal-tab-cerez" type="button" onclick="openLegalModal('cerez')" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-white text-obsidian border border-sandBorder">
+          Çerez Politikası
+        </button>
       </div>
 
-      <div class="px-6 py-4 bg-parchment border-t border-sandBorder flex items-center justify-between gap-3">
-        <span id="optimizer-summary" class="text-xs text-stoneText">Henüz dosya seçilmedi</span>
-        <button id="btn-download-all-optimized" type="button" disabled class="px-5 py-3 bg-obsidian disabled:opacity-40 hover:bg-charcoal text-linen text-xs uppercase tracking-[0.14em] font-semibold transition-colors">
-          Tümünü İndir
+      <!-- Metin İçeriği -->
+      <div id="legal-modal-body" class="p-6 sm:p-8 overflow-y-auto text-sm text-charcoal leading-relaxed space-y-4"></div>
+
+      <div class="px-6 py-4 bg-parchment border-t border-sandBorder flex items-center justify-between gap-3 shrink-0">
+        <button type="button" onclick="closeLegalModal(); openCookieBanner(true);" class="text-xs font-semibold text-bronzeDark hover:text-obsidian underline underline-offset-4">
+          Çerez Tercihlerini Düzenle
         </button>
+        <button type="button" onclick="closeLegalModal()" class="px-6 py-2.5 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold">
+          Anladım, Kapat
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ÇEREZ BİLDİRİMİ & TERCİH BANNER'I ==================== -->
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 z-[55] hidden max-w-5xl mx-auto bg-obsidian/98 text-linen border border-bronze/45 shadow-2xl backdrop-blur-md">
+    <div class="p-5 sm:p-6 space-y-4">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+        <div class="space-y-1.5 max-w-2xl">
+          <div class="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-bronzeLight font-semibold">
+            <i data-lucide="cookie" class="w-4 h-4"></i>
+            <span>Çerez & Gizlilik Tercihleriniz</span>
+          </div>
+          <p id="cookie-banner-message" class="text-xs text-linen/85 leading-relaxed">
+            Kars Cumhuriyet Oteli web sitesinde kesintisiz gezinme deneyimi, rezervasyon modüllerinin güvenli çalışması ve hizmet kalitemizin iyileştirilmesi amacıyla çerezler kullanılmaktadır. Detaylı bilgi için
+            <button type="button" onclick="openLegalModal('cerez')" class="text-bronzeLight underline underline-offset-2 hover:text-white">Çerez Politikası</button> ve
+            <button type="button" onclick="openLegalModal('kvkk')" class="text-bronzeLight underline underline-offset-2 hover:text-white">KVKK Aydınlatma Metni</button>'ni inceleyebilirsiniz.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+          <button id="btn-cookie-settings-toggle" type="button" class="px-4 py-2.5 border border-white/25 hover:border-bronzeLight text-linen text-[11px] uppercase tracking-[0.14em] font-semibold transition-colors">
+            Tercihleri Yönet
+          </button>
+          <button id="btn-cookie-essential" type="button" class="px-4 py-2.5 bg-charcoal hover:bg-white/15 border border-white/20 text-linen text-[11px] uppercase tracking-[0.14em] font-semibold transition-colors">
+            Sadece Zorunlu
+          </button>
+          <button id="btn-cookie-accept-all" type="button" class="px-5 py-2.5 bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-[11px] uppercase tracking-[0.14em] font-bold transition-colors">
+            Tümünü Kabul Et
+          </button>
+        </div>
+      </div>
+
+      <!-- Detaylı Çerez Tercih Paneli (Açılır/Kapanır) -->
+      <div id="cookie-preferences-panel" class="hidden pt-4 border-t border-white/15 space-y-3">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="p-3.5 bg-charcoal/80 border border-white/10 space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-white">Zorunlu Çerezler</span>
+              <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-bold">Her Zaman Aktif</span>
+            </div>
+            <p class="text-[11px] text-linen/70 leading-relaxed">Sitenin temel işlevleri, güvenlik doğrulamaları ve sayfa tercihleri için gereklidir.</p>
+          </div>
+
+          <label class="p-3.5 bg-charcoal/80 border border-white/10 space-y-1 cursor-pointer block">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-white">Performans & Analitik</span>
+              <input id="chk-cookie-analytics" type="checkbox" checked class="w-4 h-4 accent-[#B8935A]" />
+            </div>
+            <p class="text-[11px] text-linen/70 leading-relaxed">Ziyaretçi deneyimini ve sayfa hızını geliştirmek amacıyla anonim istatistik toplar.</p>
+          </label>
+
+          <label class="p-3.5 bg-charcoal/80 border border-white/10 space-y-1 cursor-pointer block">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-white">Rezervasyon & İşlevsel</span>
+              <input id="chk-cookie-functional" type="checkbox" checked class="w-4 h-4 accent-[#B8935A]" />
+            </div>
+            <p class="text-[11px] text-linen/70 leading-relaxed">Harici online rezervasyon motoru ve harita bileşenlerinin sorunsuz çalışmasını sağlar.</p>
+          </label>
+        </div>
+
+        <div class="flex justify-end">
+          <button id="btn-cookie-save-custom" type="button" class="px-5 py-2.5 bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-[11px] uppercase tracking-[0.14em] font-bold transition-colors">
+            Seçili Tercihleri Kaydet
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1017,6 +1108,12 @@
         eposta: "info@karscumhuriyetoteli.com",
         adres: "Yusufpaşa Mah. Kazımpaşa Cad. No:127, Merkez / Kars",
         haritaUrl: "https://maps.google.com/?q=Kars+Cumhuriyet+Oteli"
+      },
+      yasal: {
+        sirketUnvani: "Kars Cumhuriyet Oteli Turizm ve Konaklama İşletmesi",
+        cerezBannerMetni: "Kars Cumhuriyet Oteli web sitesinde kesintisiz gezinme deneyimi, rezervasyon modüllerinin güvenli çalışması ve hizmet kalitemizin iyileştirilmesi amacıyla çerezler kullanılmaktadır.",
+        kvkkOzelMetin: "",
+        cerezOzelMetin: ""
       }
     };
 
@@ -1726,6 +1823,13 @@
       document.getElementById("inp-contact-email").value = SITE_DATA.iletisim.eposta || "";
       document.getElementById("inp-contact-address").value = SITE_DATA.iletisim.adres || "";
       document.getElementById("inp-contact-map").value = SITE_DATA.iletisim.haritaUrl || "";
+
+      // KVKK & Çerez
+      const y = SITE_DATA.yasal || {};
+      document.getElementById("inp-legal-company").value = y.sirketUnvani || "Kars Cumhuriyet Oteli Turizm ve Konaklama İşletmesi";
+      document.getElementById("inp-cookie-banner-text").value = y.cerezBannerMetni || "";
+      document.getElementById("inp-kvkk-custom").value = y.kvkkOzelMetin || "";
+      document.getElementById("inp-cookie-custom").value = y.cerezOzelMetin || "";
     }
 
     function renderAdminRoomsList() {
@@ -1944,6 +2048,149 @@
     document.getElementById("inp-contact-email").addEventListener("input", (e) => { SITE_DATA.iletisim.eposta = e.target.value; renderContactSection(); });
     document.getElementById("inp-contact-address").addEventListener("input", (e) => { SITE_DATA.iletisim.adres = e.target.value; renderContactSection(); });
     document.getElementById("inp-contact-map").addEventListener("input", (e) => { SITE_DATA.iletisim.haritaUrl = e.target.value; renderContactSection(); });
+    document.getElementById("inp-legal-company").addEventListener("input", (e) => { SITE_DATA.yasal.sirketUnvani = e.target.value; });
+    document.getElementById("inp-cookie-banner-text").addEventListener("input", (e) => {
+      SITE_DATA.yasal.cerezBannerMetni = e.target.value;
+      updateCookieBannerText();
+    });
+    document.getElementById("inp-kvkk-custom").addEventListener("input", (e) => { SITE_DATA.yasal.kvkkOzelMetin = e.target.value; });
+    document.getElementById("inp-cookie-custom").addEventListener("input", (e) => { SITE_DATA.yasal.cerezOzelMetin = e.target.value; });
+
+    // ==================== KVKK & ÇEREZ POLİTİKASI YÖNETİMİ ====================
+    const COOKIE_STORAGE_KEY = "kars_cookie_consent_v1";
+
+    function updateCookieBannerText() {
+      const msgEl = document.getElementById("cookie-banner-message");
+      if (!msgEl) return;
+      const customText = (SITE_DATA.yasal && SITE_DATA.yasal.cerezBannerMetni) ||
+        "Kars Cumhuriyet Oteli web sitesinde kesintisiz gezinme deneyimi, rezervasyon modüllerinin güvenli çalışması ve hizmet kalitemizin iyileştirilmesi amacıyla çerezler kullanılmaktadır.";
+      msgEl.innerHTML = `${escapeHtml(customText)} Detaylı bilgi için <button type="button" onclick="openLegalModal('cerez')" class="text-bronzeLight underline underline-offset-2 hover:text-white">Çerez Politikası</button> ve <button type="button" onclick="openLegalModal('kvkk')" class="text-bronzeLight underline underline-offset-2 hover:text-white">KVKK Aydınlatma Metni</button>'ni inceleyebilirsiniz.`;
+    }
+
+    function buildDefaultKvkkHtml() {
+      const c = SITE_DATA.iletisim || {};
+      const company = (SITE_DATA.yasal && SITE_DATA.yasal.sirketUnvani) || "Kars Cumhuriyet Oteli Turizm ve Konaklama İşletmesi";
+      return `
+        <p><strong>1. Veri Sorumlusu:</strong> 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca kişisel verileriniz; veri sorumlusu sıfatıyla <strong>${escapeHtml(company)}</strong> (“Kars Cumhuriyet Oteli”) tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
+        <p><strong>2. İşlenen Kişisel Veriler ve İşleme Amaçları:</strong> Web sitemiz üzerinden ilettiğiniz ad-soyad, iletişim bilgileri, konaklama tarihleri, oda tercihleri ve rezervasyon notlarınız; konaklama ve rezervasyon taleplerinizin değerlendirilmesi, konaklama sözleşmesinin kurulması ve ifası, yasal yükümlülüklerin (1774 sayılı Kimlik Bildirme Kanunu vb.) yerine getirilmesi ve misafir memnuniyeti süreçlerinin yürütülmesi amaçlarıyla işlenmektedir.</p>
+        <p><strong>3. Kişisel Verilerin Aktarılması:</strong> Kişisel verileriniz yalnızca yasal zorunluluklar çerçevesinde yetkili kamu kurum ve kuruluşlarına (emniyet/jandarma kimlik bildirim sistemleri vb.) ve rezervasyon hizmetinin gerektirdiği durumlarda sözleşmeli rezervasyon altyapı sağlayıcılarına KVKK’nın 8. ve 9. maddelerine uygun olarak aktarılabilecektir.</p>
+        <p><strong>4. Toplama Yöntemi ve Hukuki Sebep:</strong> Kişisel verileriniz web sitemizdeki iletişim/rezervasyon formları, telefon, WhatsApp hattı ve e-posta kanalları aracılığıyla; KVKK’nın 5. maddesinde belirtilen “bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması” ve “veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi” hukuki sebeplerine dayanılarak toplanmaktadır.</p>
+        <p><strong>5. KVKK’nın 11. Maddesi Kapsamındaki Haklarınız:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, amacına uygun kullanılıp kullanılmadığını öğrenme, eksik veya yanlış işlenmişse düzeltilmesini isteme, silinmesini/yok edilmesini talep etme ve zarara uğramanız halinde tazminat talep etme haklarına sahipsiniz.</p>
+        <div class="p-4 bg-white border border-sandBorder text-xs space-y-1">
+          <div class="font-semibold text-obsidian">Veri Sorumlusu İletişim Bilgileri</div>
+          <div><strong>Adres:</strong> ${escapeHtml(c.adres || "")}</div>
+          <div><strong>Telefon:</strong> ${escapeHtml(c.telefon || "")}</div>
+          <div><strong>E-Posta:</strong> ${escapeHtml(c.eposta || "")}</div>
+        </div>
+      `;
+    }
+
+    function buildDefaultCookieHtml() {
+      return `
+        <p><strong>Çerez (Cookie) Nedir?</strong> Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınız aracılığıyla cihazınıza kaydedilen küçük metin dosyalarıdır. Kars Cumhuriyet Oteli web sitesinde ziyaretçi deneyimini geliştirmek ve sitenin güvenli çalışmasını sağlamak amacıyla sınırlı türde çerezler kullanılmaktadır.</p>
+        <p><strong>Kullanılan Çerez Türleri:</strong></p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Zorunlu Çerezler:</strong> Web sitesinin temel fonksiyonlarının, güvenlik doğrulamalarının ve çerez tercih kayıtlarınızın çalışması için mutlaka gereklidir. Bu çerezler devre dışı bırakılamaz.</li>
+          <li><strong>İşlevsel & Rezervasyon Çerezleri:</strong> Harici rezervasyon motoru bileşenlerinin, oda tercihlerinizin ve harita servislerinin sorunsuz çalışmasını destekler.</li>
+          <li><strong>Performans & Analitik Çerezleri:</strong> Sayfa hızı ve ziyaretçi kullanım istatistiklerini anonim olarak ölçerek hizmet kalitemizi iyileştirmemize yardımcı olur.</li>
+        </ul>
+        <p><strong>Çerez Tercihlerinizi Nasıl Yönetebilirsiniz?</strong> Sayfamızın alt kısmında yer alan <em>“Çerez Tercihlerini Yönet”</em> bağlantısından onayınızı dilediğiniz zaman güncelleyebilir veya tarayıcı ayarlarınız üzerinden mevcut çerezleri silebilirsiniz.</p>
+      `;
+    }
+
+    window.openLegalModal = function(tab) {
+      const modal = document.getElementById("legal-modal");
+      const titleEl = document.getElementById("legal-modal-title");
+      const bodyEl = document.getElementById("legal-modal-body");
+      const btnKvkk = document.getElementById("legal-tab-kvkk");
+      const btnCerez = document.getElementById("legal-tab-cerez");
+      const y = SITE_DATA.yasal || {};
+
+      if (tab === "cerez") {
+        titleEl.textContent = "Çerez Politikası";
+        btnCerez.className = "px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-obsidian text-white";
+        btnKvkk.className = "px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-white text-obsidian border border-sandBorder";
+        bodyEl.innerHTML = y.cerezOzelMetin && y.cerezOzelMetin.trim()
+          ? `<div class="whitespace-pre-line">${escapeHtml(y.cerezOzelMetin)}</div>`
+          : buildDefaultCookieHtml();
+      } else {
+        titleEl.textContent = "KVKK Aydınlatma Metni";
+        btnKvkk.className = "px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-obsidian text-white";
+        btnCerez.className = "px-4 py-2 text-xs uppercase tracking-wider font-semibold bg-white text-obsidian border border-sandBorder";
+        bodyEl.innerHTML = y.kvkkOzelMetin && y.kvkkOzelMetin.trim()
+          ? `<div class="whitespace-pre-line">${escapeHtml(y.kvkkOzelMetin)}</div>`
+          : buildDefaultKvkkHtml();
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      refreshIcons();
+    };
+
+    window.closeLegalModal = function() {
+      const modal = document.getElementById("legal-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    };
+
+    window.openCookieBanner = function(showPreferences = false) {
+      const banner = document.getElementById("cookie-banner");
+      const panel = document.getElementById("cookie-preferences-panel");
+      updateCookieBannerText();
+      try {
+        const saved = JSON.parse(localStorage.getItem(COOKIE_STORAGE_KEY) || "null");
+        if (saved) {
+          document.getElementById("chk-cookie-analytics").checked = !!saved.analytics;
+          document.getElementById("chk-cookie-functional").checked = !!saved.functional;
+        }
+      } catch (e) {}
+      if (panel) panel.classList.toggle("hidden", !showPreferences);
+      banner.classList.remove("hidden");
+      refreshIcons();
+    };
+
+    function saveCookieConsent(prefs) {
+      try {
+        localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify({
+          essential: true,
+          analytics: !!prefs.analytics,
+          functional: !!prefs.functional,
+          updatedAt: new Date().toISOString()
+        }));
+      } catch (e) {}
+      document.getElementById("cookie-banner").classList.add("hidden");
+      showToast("Çerez tercihleriniz kaydedildi.");
+    }
+
+    function initCookieBanner() {
+      updateCookieBannerText();
+      try {
+        const existing = localStorage.getItem(COOKIE_STORAGE_KEY);
+        if (!existing) {
+          document.getElementById("cookie-banner").classList.remove("hidden");
+          refreshIcons();
+        }
+      } catch (e) {
+        document.getElementById("cookie-banner").classList.remove("hidden");
+      }
+    }
+
+    document.getElementById("legal-modal-close").addEventListener("click", closeLegalModal);
+    document.getElementById("btn-cookie-settings-toggle").addEventListener("click", () => {
+      document.getElementById("cookie-preferences-panel").classList.toggle("hidden");
+    });
+    document.getElementById("btn-cookie-essential").addEventListener("click", () => {
+      saveCookieConsent({ analytics: false, functional: false });
+    });
+    document.getElementById("btn-cookie-accept-all").addEventListener("click", () => {
+      saveCookieConsent({ analytics: true, functional: true });
+    });
+    document.getElementById("btn-cookie-save-custom").addEventListener("click", () => {
+      saveCookieConsent({
+        analytics: document.getElementById("chk-cookie-analytics").checked,
+        functional: document.getElementById("chk-cookie-functional").checked
+      });
+    });
 
     // Yerel Fotoğraf Önizleme
     const localPicker = document.getElementById("local-img-picker");
@@ -2176,6 +2423,7 @@
         document.getElementById("lightbox-modal").classList.add("hidden");
         videoPlayer.pause();
         videoModal.classList.add("hidden");
+        closeLegalModal();
         closeLoginModal();
       }
       if (!document.getElementById("lightbox-modal").classList.contains("hidden")) {
@@ -2204,6 +2452,7 @@
     async function initApp() {
       renderAllPublicSections();
       startHeroAutoplay();
+      initCookieBanner();
       checkSecretTrigger();
 
       try {
@@ -2218,9 +2467,11 @@
               hero: { ...SITE_DATA.hero, ...(json.hero || {}) },
               tarihce: { ...SITE_DATA.tarihce, ...(json.tarihce || {}) },
               rezervasyon: { ...SITE_DATA.rezervasyon, ...(json.rezervasyon || {}) },
-              iletisim: { ...SITE_DATA.iletisim, ...(json.iletisim || {}) }
+              iletisim: { ...SITE_DATA.iletisim, ...(json.iletisim || {}) },
+              yasal: { ...SITE_DATA.yasal, ...(json.yasal || {}) }
             };
             renderAllPublicSections();
+            updateCookieBannerText();
           }
         }
       } catch (err) {
