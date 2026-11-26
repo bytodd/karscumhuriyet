@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kars Cumhuriyet Oteli — 1878 Baltık Mimari & Tarihi Butik Otel</title>
+  <meta name="description" content="Kars Kazımpaşa Caddesi'nde 19. yüzyıl Baltık taş mimarisi ile 1941 Cumhuriyet dönemi zarafetini buluşturan tarihi butik otel." />
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            linen: '#FAF8F5',
+            parchment: '#F1ECE4',
+            sandBorder: '#E2D9CC',
+            obsidian: '#181C20',
+            charcoal: '#262C33',
+            stoneText: '#5C5852',
+            bronze: '#B8935A',
+            bronzeLight: '#D8BC8C',
+            bronzeDark: '#8F6D39'
+          },
+          fontFamily: {
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #181C20;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Tam Ekran Hero Slider & Ken Burns Efekti */
+    .hero-slide {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1.1s ease-in-out, visibility 1.1s ease-in-out;
+      z-index: 1;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
+    .hero-slide-img {
+      transform: scale(1);
+      transition: transform 7s ease-out;
+    }
+    .hero-slide.active .hero-slide-img {
+      transform: scale(1.07);
+    }
+
+    /* İnce özel kaydırma çubuğu */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #F1ECE4; }
+    ::-webkit-scrollbar-thumb { background: #B8935A; }
+    ::-webkit-scrollbar-thumb:hover { background: #8F6D39; }
+  </style>
+</head>
+<body class="antialiased selection:bg-bronze/25 selection:text-obsidian">
+
+  <!-- ==================== ÜST MENÜ (HERO ÜZERİNDE ŞEFFAF, KAYDIRINCA KETEN) ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-30 transition-all duration-300 text-white">
+    <!-- Üst İnce Bilgi Şeridi -->
+    <div id="top-info-bar" class="border-b border-white/15 text-[11px] tracking-[0.14em] uppercase transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 h-9 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:inline-flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-bronzeLight"></i>
+            <span>Kazımpaşa Cad. No:127 · Kars Merkez</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>7/24 Resepsiyon Açık</span>
+          </span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a id="header-phone-link" href="tel:+905545411923" class="hover:text-bronzeLight transition-colors font-medium">
+            0 554 541 1923
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ana Navigasyon -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 border border-bronze/70 flex items-center justify-center font-editorial text-xl font-bold tracking-wider text-bronzeLight group-hover:bg-bronze group-hover:text-obsidian transition-colors">
+          KC
+        </div>
+        <div>
+          <div class="font-editorial text-xl sm:text-2xl font-semibold tracking-wide leading-none">
+            Kars Cumhuriyet Oteli
+          </div>
+          <div id="header-sub-brand" class="text-[10px] uppercase tracking-[0.24em] text-white/75 mt-1 transition-colors">
+            1878 Baltık Mimari Mirası
+          </div>
+        </div>
+      </a>
+
+      <!-- Masaüstü Linkler -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-[0.16em] font-medium">
+        <a href="#hikayemiz" class="hover:text-bronze transition-colors">Hikayemiz</a>
+        <a href="#odalar" class="hover:text-bronze transition-colors">Odalarımız</a>
+        <a href="#olanaklar" class="hover:text-bronze transition-colors">Olanaklar</a>
+        <a href="#rehber" class="hover:text-bronze transition-colors">Kars Rehberi</a>
+        <a href="#galeri" class="hover:text-bronze transition-colors">Galeri</a>
+        <a href="#iletisim" class="hover:text-bronze transition-colors">İletişim</a>
+      </nav>
+
+      <!-- Sağ Aksiyonlar -->
+      <div class="flex items-center gap-3">
+        <button type="button" onclick="scrollToBooking()" class="px-5 py-2.5 bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-xs uppercase tracking-[0.16em] font-semibold transition-colors">
+          Rezervasyon
+        </button>
+        <button id="mobile-menu-btn" type="button" aria-label="Menüyü Aç" class="lg:hidden p-2.5 border border-current/25">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobil Açılır Menü -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-obsidian text-linen border-t border-white/10 px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-3 text-xs uppercase tracking-[0.18em]">
+        <a href="#hikayemiz" class="py-2 border-b border-white/10 hover:text-bronzeLight mobile-nav-link">Hikayemiz & Tarihçe</a>
+        <a href="#odalar" class="py-2 border-b border-white/10 hover:text-bronzeLight mobile-nav-link">Odalarımız</a>
+        <a href="#olanaklar" class="py-2 border-b border-white/10 hover:text-bronzeLight mobile-nav-link">Otel Olanakları</a>
+        <a href="#rehber" class="py-2 border-b border-white/10 hover:text-bronzeLight mobile-nav-link">Kars Gezi Rehberi</a>
+        <a href="#galeri" class="py-2 border-b border-white/10 hover:text-bronzeLight mobile-nav-link">Fotoğraf Galerisi</a>
+        <a href="#iletisim" class="py-2 hover:text-bronzeLight mobile-nav-link">İletişim & Konum</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== TAM EKRAN (100VH) DÖNEN HERO SLIDER ==================== -->
+  <section id="hero" class="relative w-full h-screen min-h-[640px] bg-obsidian overflow-hidden flex items-center">
+    <!-- Dönen Arka Plan Slaytları -->
+    <div id="hero-slides-container" class="absolute inset-0 w-full h-full"></div>
+
+    <!-- Sinematik Karartma Katmanı -->
+    <div class="absolute inset-0 z-10 bg-gradient-to-t from-obsidian/90 via-obsidian/45 to-obsidian/65 pointer-events-none"></div>
+
+    <!-- Hero Metin ve Butonlar -->
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 w-full pt-20">
+      <div class="max-w-3xl space-y-6">
+        <div class="inline-flex items-center gap-3 px-3.5 py-1.5 bg-obsidian/60 backdrop-blur-sm border border-bronze/40 text-bronzeLight text-[11px] uppercase tracking-[0.22em]">
+          <span>1878 Baltık Taş Mimarisi</span>
+          <span>•</span>
+          <span>1941 Cumhuriyet Zarafeti</span>
+        </div>
+
+        <h1 id="hero-title" class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] tracking-tight">
+          Kars'ın Kalbinde İki Asırlık Tarihi Zarafet
+        </h1>
+
+        <p id="hero-subtitle" class="text-base sm:text-lg text-linen/85 max-w-2xl leading-relaxed font-light">
+          Kazımpaşa Caddesi'nin tarihi dokusunda; Rus dönemi kesme bazalt taş mimarisi ile erken Cumhuriyet döneminin yüksek tavanlı ferah odalarını buluşturan seçkin konaklama deneyimi.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <button type="button" onclick="scrollToBooking()" class="px-7 py-4 bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-xs uppercase tracking-[0.18em] font-semibold transition-colors">
+            Müsaitlik & Rezervasyon
+          </button>
+          <a href="#odalar" class="px-7 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors">
+            Odaları İncele
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sol / Sağ Slider Okları -->
+    <button id="hero-prev" type="button" aria-label="Önceki Fotoğraf" class="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center border border-white/25 bg-obsidian/40 hover:bg-bronze hover:border-bronze text-white hover:text-obsidian transition-colors">
+      <i data-lucide="chevron-left" class="w-5 h-5"></i>
+    </button>
+    <button id="hero-next" type="button" aria-label="Sonraki Fotoğraf" class="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center border border-white/25 bg-obsidian/40 hover:bg-bronze hover:border-bronze text-white hover:text-obsidian transition-colors">
+      <i data-lucide="chevron-right" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Alt Kontrol Şeridi: Sayaç, Aktif Fotoğraf Başlığı, Noktalar ve Aşağı Kaydır -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 border-t border-white/15 bg-obsidian/45 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-white">
+        <div class="flex items-center gap-4 text-xs">
+          <span id="hero-counter" class="font-editorial text-lg font-semibold text-bronzeLight tracking-widest">01 / 04</span>
+          <span class="w-px h-4 bg-white/20"></span>
+          <span id="hero-slide-caption" class="text-linen/85 truncate max-w-xs sm:max-w-md">Tarihi Baltık Taş Cephe & Gece Işıklandırması</span>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div id="hero-dots" class="flex items-center gap-2"></div>
+          <a href="#hikayemiz" class="hidden md:inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-linen/75 hover:text-bronzeLight transition-colors">
+            <span>Aşağı Kaydır</span>
+            <i data-lucide="arrow-down" class="w-3.5 h-3.5 animate-bounce"></i>
+          </a>
+        </div>
+      </div>
+      <!-- 6 Saniyelik Otomatik Geçiş İlerleme Çubuğu -->
+      <div class="w-full h-0.5 bg-white/10">
+        <div id="hero-progress-bar" class="h-full bg-bronze transition-all duration-100" style="width: 0%"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REZERVASYON KONUM 1: HERO ALTI -->
+  <div id="booking-slot-after_hero"></div>
+
+  <!-- ==================== HİKAYEMİZ & MİMARİ MİRAS ==================== -->
+  <section id="hikayemiz" class="py-20 sm:py-28 bg-linen border-b border-sandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <!-- Sol Kolon: Arşiv & Mimari Fotoğraf -->
+        <div class="lg:col-span-6 relative">
+          <div class="aspect-[4/3] bg-obsidian overflow-hidden border border-sandBorder shadow-xl">
+            <div id="history-main-photo" class="w-full h-full"></div>
+          </div>
+          <!-- Mimari Dönem Kartı -->
+          <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-obsidian text-linen p-6 border border-bronze/40 max-w-xs shadow-2xl">
+            <div class="text-[10px] uppercase tracking-[0.22em] text-bronzeLight">Mimari Kronoloji</div>
+            <div class="font-editorial text-2xl font-semibold text-white mt-1">1878 — 1941</div>
+            <p class="text-xs text-linen/75 mt-2 leading-relaxed">
+              Zemin katta kesme Baltık bazalt taşı, üst katlarda erken Cumhuriyet dönemi yüksek tavan mimarisi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sağ Kolon: Hikaye Anlatımı -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+            Hikayemiz & Mimari Miras
+          </div>
+          <h2 id="history-title" class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian leading-tight">
+            İki Farklı Dönem, Tek Bir Zarafet
+          </h2>
+          <p id="history-intro" class="text-base text-charcoal leading-relaxed font-medium">
+            Kazımpaşa Caddesi üzerinde yükselen yapımız, Kars'ın çok katmanlı mimari hafızasını günümüzün butik konfor standartlarıyla yaşatmaktadır.
+          </p>
+          <p id="history-detail" class="text-sm text-stoneText leading-relaxed">
+            Zemin katındaki kesme bazalt taş işçiliği ve kemerli pencere oranları 19. yüzyıl sonu Baltık mimari geleneğini yansıtırken; 1941 arşiv kayıtlarıyla belgelenen üst kat dokusu erken Cumhuriyet döneminin sade, aydınlık ve ferah mekan anlayışını taşır.
+          </p>
+
+          <!-- İki Dönem Özeti -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 bg-white border border-sandBorder">
+              <div class="font-editorial text-lg font-semibold text-obsidian">1878–1918 Baltık Zemin</div>
+              <p id="history-era-1" class="text-xs text-stoneText mt-1.5 leading-relaxed">
+                Kesme bazalt taş duvarlar, yüksek tavan oranları ve kış iklimine meydan okuyan tarihi Baltık zemin mimarisi.
+              </p>
+            </div>
+            <div class="p-4 bg-white border border-sandBorder">
+              <div class="font-editorial text-lg font-semibold text-obsidian">1941 Cumhuriyet Katı</div>
+              <p id="history-era-2" class="text-xs text-stoneText mt-1.5 leading-relaxed">
+                1941 tarihli arşiv belgeleri ışığında korunan aydınlık cephe, geniş pencereler ve erken Cumhuriyet zarafeti.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 Temel Mimari Rakam -->
+          <div id="hero-stats" class="grid grid-cols-3 gap-4 pt-6 border-t border-sandBorder"></div>
+
+          <!-- Tanıtım Filmi Tetikleyici (tanitim.mp4) -->
+          <div class="pt-2">
+            <button id="btn-open-promo-video" type="button" class="inline-flex items-center gap-3 border border-obsidian hover:bg-obsidian hover:text-linen text-obsidian text-xs uppercase tracking-[0.18em] font-semibold px-6 py-3.5 transition-colors">
+              <i data-lucide="play" class="w-4 h-4 text-bronzeDark"></i>
+              <span>Tanıtım Filmini İzle</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REZERVASYON KONUM 2: TARİHÇEMİZ ALTI -->
+  <div id="booking-slot-after_history"></div>
+
+  <!-- REZERVASYON KONUM 3: ODALAR ÜSTÜ -->
+  <div id="booking-slot-before_rooms"></div>
+
+  <!-- ==================== ODALARIMIZ & TARİHİ SÜİTLER ==================== -->
+  <section id="odalar" class="py-20 sm:py-28 bg-parchment/60 border-b border-sandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div class="space-y-3 max-w-2xl">
+          <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+            Konaklama Seçenekleri
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian">
+            Odalarımız & Tarihi Süitler
+          </h2>
+        </div>
+        <p class="text-sm text-stoneText max-w-md leading-relaxed">
+          Yüksek ahşap tavanlar, doğal taş dokusu ve modern ortopedik uyku konforuyla hazırlanan odalarımızı inceleyin.
+        </p>
+      </div>
+
+      <!-- 2 Sütunlu Editoryal Oda Vitrini -->
+      <div id="rooms-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- REZERVASYON KONUM 4: ODALAR ALTI -->
+  <div id="booking-slot-after_rooms"></div>
+
+  <!-- ==================== OTEL OLANAKLARI ==================== -->
+  <section id="olanaklar" class="py-20 sm:py-24 bg-obsidian text-linen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+        <div class="text-xs uppercase tracking-[0.24em] text-bronzeLight font-semibold">
+          Misafir Ayrıcalıkları
+        </div>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-white">
+          Tarihi Atmosfer, Günümüz Konforu
+        </h2>
+        <p class="text-sm text-linen/75">
+          Kars seyahatiniz boyunca ihtiyacınız olan tüm modern detaylar özenle düşünüldü.
+        </p>
+      </div>
+
+      <div id="amenities-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ==================== KARS GEZİ REHBERİ ==================== -->
+  <section id="rehber" class="py-20 sm:py-28 bg-linen border-b border-sandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div class="space-y-3 max-w-2xl">
+          <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+            Merkezi Konum Avantajı
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian">
+            Kars'ın Tarihini ve Doğasını Keşfedin
+          </h2>
+        </div>
+        <p class="text-sm text-stoneText max-w-md leading-relaxed">
+          Otelimizin Kazımpaşa Caddesi üzerindeki merkezi konumundan şehrin tüm tarihi duraklarına dakikalar içinde ulaşabilirsiniz.
+        </p>
+      </div>
+
+      <div id="guide-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- REZERVASYON KONUM 5: REHBER ALTI -->
+  <div id="booking-slot-after_guide"></div>
+
+  <!-- ==================== FOTOĞRAF GALERİSİ ==================== -->
+  <section id="galeri" class="py-20 sm:py-28 bg-parchment/50 border-b border-sandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3">
+          <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+            Görsel Seçki
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian">
+            Otelimizden Kareler
+          </h2>
+        </div>
+        <div id="gallery-filters" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ==================== SIK SORULAN SORULAR ==================== -->
+  <section id="sss" class="py-20 sm:py-24 bg-linen border-b border-sandBorder">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8">
+      <div class="text-center space-y-3 mb-12">
+        <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+          Merak Edilenler
+        </div>
+        <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian">
+          Sık Sorulan Sorular
+        </h2>
+      </div>
+      <div id="faq-list" class="space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- REZERVASYON KONUM 6: İLETİŞİM ÜSTÜ -->
+  <div id="booking-slot-before_contact"></div>
+
+  <!-- ==================== İLETİŞİM & KONUM ==================== -->
+  <section id="iletisim" class="py-20 sm:py-28 bg-parchment/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Sol: İletişim Bilgileri -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="text-xs uppercase tracking-[0.24em] text-bronzeDark font-semibold">
+            Bize Ulaşın
+          </div>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-semibold text-obsidian leading-tight">
+            Kars'taki Evinize Davetlisiniz
+          </h2>
+          <p class="text-sm text-stoneText leading-relaxed">
+            Oda müsaitliği, grup konaklamaları, Doğu Ekspresi transfer bilgi talepleri ve tüm sorularınız için 7/24 resepsiyon ekibimize ulaşabilirsiniz.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="p-4 bg-white border border-sandBorder flex items-start gap-4">
+              <i data-lucide="map-pin" class="w-5 h-5 text-bronzeDark shrink-0 mt-0.5"></i>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-stoneText font-semibold">Adres</div>
+                <div id="contact-address" class="text-sm text-obsidian font-medium mt-1">
+                  Yusufpaşa Mah. Kazımpaşa Cad. No:127, Merkez / Kars
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white border border-sandBorder flex items-start gap-4">
+              <i data-lucide="phone" class="w-5 h-5 text-bronzeDark shrink-0 mt-0.5"></i>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-stoneText font-semibold">Telefon & Resepsiyon</div>
+                <a id="contact-phone" href="tel:+905545411923" class="text-base text-obsidian font-semibold hover:text-bronzeDark mt-1 inline-block">
+                  0 554 541 1923
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white border border-sandBorder flex items-start gap-4">
+              <i data-lucide="mail" class="w-5 h-5 text-bronzeDark shrink-0 mt-0.5"></i>
+              <div>
+                <div class="text-xs uppercase tracking-wider text-stoneText font-semibold">E-Posta</div>
+                <a id="contact-email" href="mailto:info@karscumhuriyetoteli.com" class="text-sm text-obsidian font-medium hover:text-bronzeDark mt-1 inline-block">
+                  info@karscumhuriyetoteli.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a id="contact-whatsapp-btn" href="https://wa.me/905545411923" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs uppercase tracking-[0.16em] font-semibold inline-flex items-center gap-2 transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>WhatsApp Hattı</span>
+            </a>
+            <a id="contact-map-btn" href="https://maps.google.com/?q=Kars+Cumhuriyet+Oteli" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold inline-flex items-center gap-2 transition-colors">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Yol Tarifi Al</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sağ: Hızlı WhatsApp Talep Formu -->
+        <div class="lg:col-span-7">
+          <div class="bg-white border border-sandBorder p-8 sm:p-10 shadow-sm">
+            <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-obsidian">
+              Hızlı Konaklama Talebi Oluşturun
+            </h3>
+            <p class="text-xs text-stoneText mt-1.5">
+              Bilgilerinizi doldurduğunuzda mesajınız doğrudan resepsiyon WhatsApp hattımıza hazır olarak aktarılır.
+            </p>
+
+            <form id="quick-contact-form" class="mt-6 space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Adınız Soyadınız</label>
+                  <input id="qc-name" type="text" required placeholder="Örn: Ahmet Yılmaz" class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Oda Tercihi</label>
+                  <select id="qc-room" class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze"></select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Giriş Tarihi</label>
+                  <input id="qc-checkin" type="date" class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Çıkış Tarihi</label>
+                  <input id="qc-checkout" type="date" class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Notunuz / Misafir Sayısı</label>
+                <textarea id="qc-note" rows="3" placeholder="2 Yetişkin, Doğu Ekspresi varış saati vb." class="w-full px-4 py-3 bg-linen border border-sandBorder text-sm focus:outline-none focus:border-bronze"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.18em] font-semibold transition-colors">
+                WhatsApp ile Rezervasyon Talebi Gönder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-obsidian text-linen/80 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 border border-bronze/60 flex items-center justify-center font-editorial text-lg font-bold text-bronzeLight">
+          KC
+        </div>
+        <div>
+          <div class="font-editorial text-xl font-semibold text-white">Kars Cumhuriyet Oteli</div>
+          <div class="text-[11px] text-linen/60">karscumhuriyetoteli.com · 1878 Baltık Mimari Mirası</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs uppercase tracking-widest">
+        <a href="#hikayemiz" class="hover:text-bronzeLight">Hikayemiz</a>
+        <a href="#odalar" class="hover:text-bronzeLight">Odalar</a>
+        <a href="#galeri" class="hover:text-bronzeLight">Galeri</a>
+        <a href="#iletisim" class="hover:text-bronzeLight">İletişim</a>
+      </div>
+
+      <!-- Mobilde 5 Kez Tıklayınca Yönetim Girişini Açan Telif Yazısı -->
+      <div id="footer-copy" class="text-xs text-linen/55 select-none cursor-default">
+        © 2026 Kars Cumhuriyet Oteli · Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== ODA DETAY MODALI ==================== -->
+  <div id="room-modal" class="fixed inset-0 z-40 hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="w-full max-w-3xl bg-linen border border-sandBorder shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 bg-obsidian text-white flex items-center justify-between">
+        <span class="text-xs uppercase tracking-[0.2em] text-bronzeLight">Oda Detayları</span>
+        <button id="room-modal-close" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="room-modal-body" class="p-6 sm:p-8 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- ==================== GALERİ LIGHTBOX MODALI ==================== -->
+  <div id="lightbox-modal" class="fixed inset-0 z-40 hidden items-center justify-center p-4 bg-obsidian/95 backdrop-blur-md" role="dialog" aria-modal="true">
+    <button id="lightbox-close" type="button" aria-label="Kapat" class="absolute top-5 right-5 p-3 border border-white/25 hover:bg-white/15 text-white">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <button id="lightbox-prev" type="button" aria-label="Önceki" class="absolute left-4 sm:left-8 p-3 border border-white/25 hover:bg-white/15 text-white">
+      <i data-lucide="chevron-left" class="w-6 h-6"></i>
+    </button>
+    <button id="lightbox-next" type="button" aria-label="Sonraki" class="absolute right-4 sm:right-8 p-3 border border-white/25 hover:bg-white/15 text-white">
+      <i data-lucide="chevron-right" class="w-6 h-6"></i>
+    </button>
+    <div class="max-w-4xl w-full flex flex-col items-center gap-3">
+      <div id="lightbox-media" class="w-full max-h-[75vh] flex items-center justify-center overflow-hidden"></div>
+      <div id="lightbox-caption" class="font-editorial italic text-white text-lg text-center"></div>
+    </div>
+  </div>
+
+  <!-- ==================== TANITIM FİLMİ MODALI (tanitim.mp4) ==================== -->
+  <div id="video-modal" class="fixed inset-0 z-40 hidden items-center justify-center p-4 bg-obsidian/92 backdrop-blur-md" role="dialog" aria-modal="true">
+    <button id="video-modal-close" type="button" aria-label="Videoyu Kapat" class="absolute top-5 right-5 p-3 border border-white/25 hover:bg-white/15 text-white">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div class="w-full max-w-sm bg-obsidian border border-bronze/40 shadow-2xl overflow-hidden">
+      <div class="aspect-[9/16] bg-black flex items-center justify-center relative">
+        <video id="promo-video-player" controls playsinline preload="metadata" class="w-full h-full object-cover">
+          <source src="tanitim.mp4" type="video/mp4" />
+        </video>
+        <div id="promo-video-fallback" class="hidden absolute inset-0 p-6 flex flex-col items-center justify-center text-center text-linen space-y-3 bg-obsidian">
+          <i data-lucide="film" class="w-10 h-10 text-bronzeLight"></i>
+          <div class="font-editorial text-2xl font-semibold text-white">Tanıtım Filmi Hazırlanıyor</div>
+          <p class="text-xs text-linen/75 leading-relaxed">
+            Tanıtım videosunu GitHub deponuza <strong>tanitim.mp4</strong> adıyla yüklediğinizde bu pencerede otomatik oynatılır.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GİZLİ YÖNETİM GİRİŞ MODALI (/api/giris) ==================== -->
+  <div id="login-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
+    <div class="w-full max-w-md bg-linen border border-sandBorder shadow-2xl overflow-hidden">
+      <div class="px-6 py-4 bg-obsidian text-white flex items-center justify-between">
+        <div>
+          <h3 class="font-editorial text-xl font-semibold">Yönetim Paneli Girişi</h3>
+          <p class="text-[11px] text-bronzeLight">Sunucu Korumalı Yetkilendirme</p>
+        </div>
+        <button id="login-modal-close" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <form id="login-form" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-2">Yetki Rolü Seçin</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="loginRole" value="admin" checked class="peer sr-only" />
+              <div class="p-3 text-center border border-sandBorder bg-white peer-checked:bg-obsidian peer-checked:text-white peer-checked:border-obsidian text-xs font-semibold transition-colors">
+                Yönetici (Tam Yetki)
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="loginRole" value="editor" class="peer sr-only" />
+              <div class="p-3 text-center border border-sandBorder bg-white peer-checked:bg-obsidian peer-checked:text-white peer-checked:border-obsidian text-xs font-semibold transition-colors">
+                Editör (Sadece Odalar)
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label for="login-password" class="block text-xs uppercase tracking-wider text-stoneText font-semibold mb-1.5">Şifre</label>
+          <input id="login-password" type="password" required placeholder="••••••••" class="w-full px-4 py-3 bg-white border border-sandBorder text-sm focus:outline-none focus:border-bronze" />
+        </div>
+
+        <div id="login-error" class="hidden p-3 bg-red-50 border border-red-200 text-red-700 text-xs"></div>
+
+        <button id="login-submit-btn" type="submit" class="w-full py-3.5 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.18em] font-semibold transition-colors">
+          Giriş Yap
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== CANLI YÖNETİM PANELİ ÇEKMECESİ ==================== -->
+  <div id="admin-backdrop" class="fixed inset-0 z-50 hidden bg-obsidian/60 backdrop-blur-xs"></div>
+  <aside id="admin-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xl bg-linen border-l border-sandBorder shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <!-- Panel Başlığı -->
+    <div class="px-6 py-4 bg-obsidian text-white flex items-center justify-between shrink-0">
+      <div>
+        <div class="flex items-center gap-2">
+          <h3 class="font-editorial text-xl font-semibold">Canlı Site Yönetimi</h3>
+          <span id="admin-role-badge" class="px-2 py-0.5 bg-bronze text-obsidian text-[10px] uppercase tracking-wider font-bold">Yönetici</span>
+        </div>
+        <p class="text-[11px] text-linen/70 mt-0.5">Değişiklikler anında sayfada önizlenir</p>
+      </div>
+      <button id="admin-close-btn" type="button" aria-label="Paneli Kapat" class="p-2 border border-white/20 hover:bg-white/15">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Sekmeler -->
+    <div id="admin-tabs-bar" class="px-4 py-2.5 bg-parchment border-b border-sandBorder flex flex-wrap gap-1.5 shrink-0">
+      <button type="button" data-admin-tab="odalar" class="admin-tab-btn px-3 py-1.5 text-xs font-semibold bg-obsidian text-white">Odalar</button>
+      <button type="button" data-admin-tab="hero" class="admin-tab-btn admin-only-tab px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Hero & Slider</button>
+      <button type="button" data-admin-tab="rezervasyon" class="admin-tab-btn admin-only-tab px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Rezervasyon & Kod</button>
+      <button type="button" data-admin-tab="tarihce" class="admin-tab-btn admin-only-tab px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Tarihçe & SSS</button>
+      <button type="button" data-admin-tab="galeri" class="admin-tab-btn admin-only-tab px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">Galeri</button>
+      <button type="button" data-admin-tab="iletisim" class="admin-tab-btn admin-only-tab px-3 py-1.5 text-xs font-semibold bg-white text-obsidian border border-sandBorder">İletişim</button>
+    </div>
+
+    <!-- Sekme İçerikleri -->
+    <div class="p-6 overflow-y-auto flex-1 space-y-6">
+      <!-- 1. ODALAR SEKMESİ -->
+      <div id="tab-odalar" class="admin-tab-panel space-y-4">
+        <div class="flex items-center justify-between">
+          <h4 class="font-editorial text-xl font-semibold">Oda & Süit Yönetimi</h4>
+          <button id="btn-add-room" type="button" class="px-3 py-1.5 bg-obsidian text-white text-xs font-semibold">+ Yeni Oda Ekle</button>
+        </div>
+        <div id="admin-rooms-list" class="space-y-4"></div>
+      </div>
+
+      <!-- 2. HERO & SLIDER SEKMESİ -->
+      <div id="tab-hero" class="admin-tab-panel hidden space-y-4">
+        <h4 class="font-editorial text-xl font-semibold">Hero Metinleri & Tam Ekran Slaytlar</h4>
+        <div class="space-y-3 bg-white p-4 border border-sandBorder">
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Ana Başlık</label>
+            <input id="inp-hero-title" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Alt Açıklama</label>
+            <textarea id="inp-hero-subtitle" rows="3" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2">
+          <h5 class="text-xs uppercase tracking-wider font-bold text-obsidian">Dönen Hero Fotoğrafları</h5>
+          <button id="btn-add-slide" type="button" class="px-3 py-1.5 bg-obsidian text-white text-xs font-semibold">+ Slayt Ekle</button>
+        </div>
+        <div id="admin-slides-list" class="space-y-3"></div>
+      </div>
+
+      <!-- 3. REZERVASYON & ÖZEL KOD SEKMESİ -->
+      <div id="tab-rezervasyon" class="admin-tab-panel hidden space-y-4">
+        <h4 class="font-editorial text-xl font-semibold">Rezervasyon Alanı Konumu & Özel Widget Kodu</h4>
+        <div class="bg-white p-4 border border-sandBorder space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1.5">Sayfadaki Konumu (7 Seçenek)</label>
+            <select id="inp-booking-position" class="w-full px-3 py-2.5 bg-linen border border-sandBorder text-xs font-medium">
+              <option value="after_hero">1. Tam Ekran Hero Slider Hemen Altı (Önerilen)</option>
+              <option value="after_history">2. Hikayemiz & Mimari Miras Altı</option>
+              <option value="before_rooms">3. Odalarımız Bölümü Üstü</option>
+              <option value="after_rooms">4. Odalarımız Bölümü Altı</option>
+              <option value="after_guide">5. Kars Gezi Rehberi Altı</option>
+              <option value="before_contact">6. İletişim Bölümü Üstü</option>
+              <option value="hidden">7. Rezervasyon Alanını Gizle</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Rezervasyon Çubuğu Başlığı</label>
+            <input id="inp-booking-title" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">
+              Özel Rezervasyon Motoru Kodu (HotelRunner, ElektraWeb, Reseliva HTML / iframe / script)
+            </label>
+            <textarea id="inp-booking-custom-code" rows="6" placeholder="Harici rezervasyon kodunuzu buraya yapıştırın. Boş bırakırsanız hazır Hızlı Oda & Tarih Rezervasyon Modülü görünür." class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs font-mono"></textarea>
+            <p class="text-[11px] text-stoneText mt-1">
+              Kodu yapıştırdığınız anda sayfada seçtiğiniz konumda canlı olarak çalışır.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. TARİHÇE & SSS SEKMESİ -->
+      <div id="tab-tarihce" class="admin-tab-panel hidden space-y-4">
+        <h4 class="font-editorial text-xl font-semibold">Tarihçemiz & Sık Sorulan Sorular</h4>
+        <div class="bg-white p-4 border border-sandBorder space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Tarihçe Başlığı</label>
+            <input id="inp-history-title" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Giriş Paragrafı</label>
+            <textarea id="inp-history-intro" rows="2" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Detay Paragrafı</label>
+            <textarea id="inp-history-detail" rows="3" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-2">
+          <h5 class="text-xs uppercase tracking-wider font-bold text-obsidian">Sık Sorulan Sorular</h5>
+          <button id="btn-add-faq" type="button" class="px-3 py-1.5 bg-obsidian text-white text-xs font-semibold">+ Soru Ekle</button>
+        </div>
+        <div id="admin-faq-list" class="space-y-3"></div>
+      </div>
+
+      <!-- 5. GALERİ SEKMESİ -->
+      <div id="tab-galeri" class="admin-tab-panel hidden space-y-4">
+        <div class="flex items-center justify-between">
+          <h4 class="font-editorial text-xl font-semibold">Galeri Fotoğrafları</h4>
+          <button id="btn-add-gallery" type="button" class="px-3 py-1.5 bg-obsidian text-white text-xs font-semibold">+ Fotoğraf Ekle</button>
+        </div>
+        <div id="admin-gallery-list" class="space-y-3"></div>
+      </div>
+
+      <!-- 6. İLETİŞİM SEKMESİ -->
+      <div id="tab-iletisim" class="admin-tab-panel hidden space-y-4">
+        <h4 class="font-editorial text-xl font-semibold">İletişim & Konum Bilgileri</h4>
+        <div class="bg-white p-4 border border-sandBorder space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Görünen Telefon</label>
+            <input id="inp-contact-phone" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">WhatsApp Numarası (Başında 90 ile, boşluksuz)</label>
+            <input id="inp-contact-whatsapp" type="text" placeholder="905545411923" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">E-Posta Adresi</label>
+            <input id="inp-contact-email" type="email" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Açık Adres</label>
+            <textarea id="inp-contact-address" rows="2" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stoneText mb-1">Google Haritalar Linki</label>
+            <input id="inp-contact-map" type="text" class="w-full px-3 py-2 bg-linen border border-sandBorder text-xs" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Alt Araç Çubuğu -->
+    <div class="p-4 bg-parchment border-t border-sandBorder space-y-2.5 shrink-0">
+      <div class="grid grid-cols-3 gap-2">
+        <button id="btn-local-preview" type="button" class="py-2.5 px-2 bg-white hover:bg-linen border border-sandBorder text-obsidian text-[11px] font-semibold flex items-center justify-center text-center">
+          <span>Fotoğraf Önizle</span>
+        </button>
+        <button id="btn-open-optimizer" type="button" class="py-2.5 px-2 bg-white hover:bg-linen border border-sandBorder text-bronzeDark text-[11px] font-semibold flex items-center justify-center text-center">
+          <span>Fotoğraf Küçült</span>
+        </button>
+        <button id="btn-logout" type="button" class="py-2.5 px-2 bg-white hover:bg-red-50 border border-sandBorder text-red-700 text-[11px] font-semibold flex items-center justify-center text-center">
+          <span>Güvenli Çıkış</span>
+        </button>
+      </div>
+
+      <button id="btn-download-json" type="button" class="w-full py-3.5 px-4 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold flex items-center justify-center gap-2">
+        <span>Kaydet ve veri.json İndir</span>
+      </button>
+
+      <p class="text-[11px] text-stoneText text-center leading-snug">
+        İndirdiğiniz <strong>veri.json</strong> dosyasını GitHub deponuza yüklediğinizde tüm ziyaretçilerde kalıcı olur.
+      </p>
+    </div>
+  </aside>
+
+  <!-- Gizli Yerel Fotoğraf Seçiciler -->
+  <input id="local-img-picker" type="file" multiple accept="image/*" class="hidden" />
+  <input id="optimizer-file-input" type="file" multiple accept="image/*" class="hidden" />
+
+  <!-- ==================== WEB FOTOĞRAF KÜÇÜLTÜCÜ MODALI ==================== -->
+  <div id="img-optimizer-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
+    <div class="w-full max-w-xl bg-linen border border-sandBorder shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
+      <div class="px-6 py-4 bg-obsidian text-linen flex items-center justify-between">
+        <div>
+          <h3 class="font-editorial text-xl font-semibold text-white">Web İçin Fotoğraf Küçültücü</h3>
+          <p class="text-[11px] text-bronzeLight mt-0.5">Dosya adlarını bozmadan 1920px genişliğe ve ~250 KB boyutuna optimize eder</p>
+        </div>
+        <button id="close-optimizer-modal" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15 text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto space-y-4">
+        <button id="btn-select-optimize-files" type="button" class="w-full py-6 border-2 border-dashed border-bronze/60 hover:border-obsidian bg-white hover:bg-parchment/40 text-center transition-colors space-y-1.5">
+          <div class="font-editorial text-xl font-semibold text-obsidian">Küçültülecek Fotoğrafları Seçin</div>
+          <p class="text-xs text-stoneText">Tüm otel fotoğraflarını (JPG, PNG, WEBP) topluca seçebilirsiniz</p>
+        </button>
+
+        <div id="optimizer-status" class="hidden text-xs font-semibold text-bronzeDark text-center"></div>
+        <div id="optimizer-results-list" class="space-y-2"></div>
+      </div>
+
+      <div class="px-6 py-4 bg-parchment border-t border-sandBorder flex items-center justify-between gap-3">
+        <span id="optimizer-summary" class="text-xs text-stoneText">Henüz dosya seçilmedi</span>
+        <button id="btn-download-all-optimized" type="button" disabled class="px-5 py-3 bg-obsidian disabled:opacity-40 hover:bg-charcoal text-linen text-xs uppercase tracking-[0.14em] font-semibold transition-colors">
+          Tümünü İndir
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bildirim Kutusu -->
+  <div id="toast-notification" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[70] hidden px-5 py-3 bg-obsidian text-linen border border-bronze/50 text-xs font-medium shadow-2xl"></div>
+
+  <!-- ==================== JAVASCRIPT UYGULAMA MANTIĞI ==================== -->
+  <script>
+    // 1. VARSAYILAN SİTE VERİLERİ (veri.json yüklenirse üzerine yazılır)
+    let SITE_DATA = {
+      hero: {
+        baslik: "Kars'ın Kalbinde İki Asırlık Tarihi Zarafet",
+        altBaslik: "Kazımpaşa Caddesi'nin tarihi dokusunda; Rus dönemi kesme bazalt taş mimarisi ile erken Cumhuriyet döneminin yüksek tavanlı ferah odalarını buluşturan seçkin konaklama deneyimi.",
+        slaytlar: [
+          {
+            gorsel: "IMG_1251.JPG.jpg",
+            baslik: "Tarihi Baltık Taş Cephe & Gece Işıklandırması"
+          },
+          {
+            gorsel: "IMG_0299.JPG.jpg",
+            baslik: "Yüksek Tavanlı & Ferah Tarihi Butik Odalar"
+          },
+          {
+            gorsel: "IMG_0617.JPG.jpg",
+            baslik: "1941 Cumhuriyet Dönemi Zarafetiyle Karşılama Lobisi"
+          },
+          {
+            gorsel: "IMG_0615.JPG.jpg",
+            baslik: "Bazalt Taş Dokulu Kahvaltı & Restoran Salonu"
+          }
+        ],
+        istatistikler: [
+          { deger: "1878", etiket: "Baltık Taş Mimari Mirası" },
+          { deger: "1941", etiket: "Cumhuriyet Dönemi Dokusu" },
+          { deger: "7/24", etiket: "Kesintisiz Resepsiyon" }
+        ]
+      },
+      tarihce: {
+        baslik: "İki Farklı Dönem, Tek Bir Zarafet",
+        giris: "Kazımpaşa Caddesi üzerinde yükselen yapımız, Kars'ın çok katmanlı mimari hafızasını günümüzün butik konfor standartlarıyla yaşatmaktadır.",
+        detay: "Zemin katındaki kesme bazalt taş işçiliği ve kemerli pencere oranları 19. yüzyıl sonu Baltık mimari geleneğini yansıtırken; 1941 arşiv kayıtlarıyla belgelenen üst kat dokusu erken Cumhuriyet döneminin sade, aydınlık ve ferah mekan anlayışını taşır.",
+        donem1: "Kesme bazalt taş duvarlar, yüksek tavan oranları ve kış iklimine meydan okuyan tarihi Baltık zemin mimarisi.",
+        donem2: "1941 tarihli arşiv belgeleri ışığında korunan aydınlık cephe, geniş pencereler ve erken Cumhuriyet zarafeti."
+      },
+      rezervasyon: {
+        konum: "after_hero",
+        baslik: "Müsaitlik Sorgulama & Hızlı Rezervasyon",
+        ozelKod: ""
+      },
+      odalar: [
+        {
+          id: 1,
+          ad: "Single Room",
+          m2: "18 m²",
+          kapasite: "1 Yetişkin",
+          yatak: "1 Adet Tek Kişilik Ortopedik Yatak",
+          fiyatEtiketi: "Yöresel Kahvaltı Dahil",
+          ozellikler: ["Baltık Taş Doku", "Ücretsiz Wi-Fi", "Akıllı TV", "Özel Banyo", "Merkezi Isıtma"],
+          gorseller: ["IMG_0299.JPG.jpg"],
+          aciklama: "İş seyahatleri ve bireysel Kars keşifleri için tasarlanmış; yüksek tavanlı, sıcak ve huzurlu tek kişilik butik oda."
+        },
+        {
+          id: 2,
+          ad: "Double Room",
+          m2: "24 m²",
+          kapasite: "2 Yetişkin",
+          yatak: "1 Adet Çift Kişilik Queen Yatak",
+          fiyatEtiketi: "Yöresel Kahvaltı Dahil",
+          ozellikler: ["Tarihi Kemer Pencere", "Ücretsiz Wi-Fi", "Çay & Kahve Seti", "Özel Banyo", "Merkezi Isıtma"],
+          gorseller: ["IMG_0299.JPG.jpg", "IMG_0617.JPG.jpg"],
+          aciklama: "Çiftler için ideal, erken Cumhuriyet döneminin ferah pencere oranlarına sahip konforlu çift kişilik konaklama alanı."
+        },
+        {
+          id: 3,
+          ad: "King Room",
+          m2: "30 m²",
+          kapasite: "2 Yetişkin + 1 Çocuk",
+          yatak: "1 Adet Geniş King Size Yatak",
+          fiyatEtiketi: "Geniş Yaşam Alanı",
+          ozellikler: ["King Size Yatak", "Oturma Köşesi", "Akıllı TV", "Ücretsiz Wi-Fi", "Özel Banyo"],
+          gorseller: ["IMG_0299.JPG.jpg", "IMG_0618.JPG.jpg"],
+          aciklama: "Ekstra geniş yatak ölçüsü, dinlenme köşesi ve tarihi cephe manzarasıyla uzun konaklamalar için üst düzey rahatlık sunar."
+        },
+        {
+          id: 4,
+          ad: "Suite Room",
+          m2: "42 m²",
+          kapasite: "3–4 Kişi / Aile",
+          yatak: "1 King Yatak + Ayrı Oturma Grubu",
+          fiyatEtiketi: "Özel Tarihi Süit",
+          ozellikler: ["Ayrı Oturma Alanı", "Kazımpaşa Cad. Manzarası", "Premium İkramlar", "Geniş Banyo", "7/24 Oda Servisi"],
+          gorseller: ["IMG_0299.JPG.jpg", "IMG_0615.JPG.jpg"],
+          aciklama: "Otelimizin en seçkin köşesinde yer alan, geniş salon bölümü ve tarihi mimari detaylarıyla aileler ve özel misafirler için tasarlanmış süit."
+        }
+      ],
+      olanaklar: [
+        { ikon: "wifi", baslik: "Yüksek Hızlı Wi-Fi", aciklama: "Tüm odalar ve ortak yaşam alanlarında kesintisiz fiber internet." },
+        { ikon: "coffee", baslik: "Yöresel Kars Kahvaltısı", aciklama: "Kars kaşarı, balı, ketesi ve doğal ürünlerle zengin kahvaltı servisi." },
+        { ikon: "flame", baslik: "24 Saat Merkezi Isıtma", aciklama: "Kars kışında tüm odalarda ideal sıcaklık sunan modern iklimlendirme." },
+        { ikon: "clock", baslik: "7/24 Resepsiyon & Karşılama", aciklama: "Doğu Ekspresi ve gece uçuşlarına uygun kesintisiz resepsiyon." },
+        { ikon: "car", baslik: "Ücretsiz Otopark İmkanı", aciklama: "Misafirlerimize özel güvenli araç park alanı kolaylığı." },
+        { ikon: "shield-check", baslik: "Tarihi Koruma & Konfor", aciklama: "Aslına sadık restore edilmiş taş ve ahşap detaylarla huzurlu uyku." }
+      ],
+      rehber: [
+        { mesafe: "5 Dakika Sürüş", baslik: "Kars Kalesi & Taş Köprü", aciklama: "12. yüzyıldan günümüze uzanan tarihi kale surları ve Kars Çayı üzerindeki Taş Köprü." },
+        { mesafe: "Yürüme Mesafesi", baslik: "Kazımpaşa & Baltık Sokakları", aciklama: "Otelimizin hemen önünde yer alan 19. yüzyıl kesme taş binalar ve tarihi yürüyüş rotası." },
+        { mesafe: "45 Dakika", baslik: "Ani Ören Yeri", aciklama: "UNESCO Dünya Mirası Listesi'ndeki Orta Çağ medeniyetler başkenti Ani harabeleri." },
+        { mesafe: "45 Dakika", baslik: "Çıldır Gölü & Atlı Kızak", aciklama: "Kış aylarında tamamen buz tutan göl üzerinde atlı kızak ve sarı balık deneyimi." },
+        { mesafe: "40 Dakika", baslik: "Sarıkamış Kayak Merkezi", aciklama: "Kristal kar kalitesi ve sarıçam ormanlarıyla ünlü Türkiye'nin gözde kış merkezi." },
+        { mesafe: "10 Dakika", baslik: "Kars Peynir Müzesi & Gastronomi", aciklama: "Kaz eti, hangel, Kars gravyeri ve yöresel tatların sunulduğu tarihi mekanlar." }
+      ],
+      galeri: [
+        { gorsel: "IMG_1251.JPG.jpg", baslik: "Kars Cumhuriyet Oteli Gece Görünümü", kategori: "Mimari" },
+        { gorsel: "WhatsApp Image 2026-11-18 at 17.13.29.jpeg", baslik: "Kars Kalesi Manzaralı Tarihi Cephe", kategori: "Dış Cephe" },
+        { gorsel: "IMG_0299.JPG.jpg", baslik: "Ahşap Başlıklı Tarihi Butik Oda", kategori: "Odalar" },
+        { gorsel: "IMG_0617.JPG.jpg", baslik: "Karşılama Salonu & Tarihi Kars Tabloları", kategori: "İç Mekan" },
+        { gorsel: "IMG_0618.JPG.jpg", baslik: "1941 Arşiv Fotoğrafları & Pirinç Saat Köşesi", kategori: "Mimari" },
+        { gorsel: "IMG_0616.JPG.jpg", baslik: "Cumhuriyet Oteli Tarihi Giriş Tabelası", kategori: "Dış Cephe" },
+        { gorsel: "IMG_0615.JPG.jpg", baslik: "Bazalt Taş Duvarlı Kahvaltı Salonu", kategori: "İç Mekan" },
+        { gorsel: "IMG_0614.JPG.jpg", baslik: "Restoran & Dinlenme Alanı", kategori: "İç Mekan" }
+      ],
+      sss: [
+        {
+          soru: "Giriş (Check-in) ve çıkış (Check-out) saatleriniz nedir?",
+          cevap: "Otelimize giriş saati 14:00, çıkış saati 12:00'dir. Doğu Ekspresi veya sabah uçuşu ile erken gelen misafirlerimiz için resepsiyonumuzda ücretsiz bagaj emanet imkanı sunuyoruz."
+        },
+        {
+          soru: "Konaklama ücretine kahvaltı dahil midir?",
+          cevap: "Evet, tüm oda konaklamalarımızda Kars kaşarı, balı, tereyağı ve yöresel lezzetlerden oluşan sabah kahvaltımız dahildir."
+        },
+        {
+          soru: "Doğu Ekspresi tren garına mesafeniz ne kadardır?",
+          cevap: "Kars Tren Garı otelimize araçla yalnızca 5 dakika (yaklaşık 1,8 km) uzaklıktadır. Resepsiyonumuz transfer konusunda yardımcı olmaktadır."
+        },
+        {
+          soru: "Kış aylarında odaların ısınma durumu nasıldır?",
+          cevap: "Tarihi kalın bazalt taş duvarlarımız yüksek ısı yalıtımı sağlarken, tüm odalarımızda 24 saat kesintisiz merkezi ısıtma sistemi bulunmaktadır."
+        }
+      ],
+      iletisim: {
+        telefon: "0 554 541 1923",
+        whatsapp: "905545411923",
+        eposta: "info@karscumhuriyetoteli.com",
+        adres: "Yusufpaşa Mah. Kazımpaşa Cad. No:127, Merkez / Kars",
+        haritaUrl: "https://maps.google.com/?q=Kars+Cumhuriyet+Oteli"
+      }
+    };
+
+    // 2. YARDIMCI FONKSİYONLAR & YEREL GÖRSEL ÖNBELLEĞİ
+    const localImageMap = {};
+    let currentSlideIdx = 0;
+    let heroTimer = null;
+    let heroProgress = 0;
+    let activeGalleryFilter = "Tümü";
+    let lightboxIdx = 0;
+    let currentUserRole = null;
+
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons();
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str == null ? "" : str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function resolveImg(filename) {
+      if (!filename) return "https://placehold.co/1200x800/181C20/D8BC8C?text=Kars+Cumhuriyet+Oteli";
+      const key = String(filename).trim().toLowerCase();
+      if (localImageMap[key]) return localImageMap[key];
+      return filename;
+    }
+
+    window.handleImgErr = function(imgEl, filename, altText) {
+      if (!imgEl || imgEl.dataset.fallbackApplied === "1") return;
+      imgEl.dataset.fallbackApplied = "1";
+      imgEl.onerror = null;
+      const label = encodeURIComponent(altText || filename || "Kars Cumhuriyet Oteli");
+      imgEl.src = `https://placehold.co/1200x800/181C20/D8BC8C?text=${label}`;
+    };
+
+    function imgTag(filename, alt, cls = "w-full h-full object-cover", loadingMode = "lazy") {
+      const safeFile = escapeHtml(filename || "").replace(/'/g, "\\'");
+      const safeAlt = escapeHtml(alt || "").replace(/'/g, "\\'");
+      return `<img src="${escapeHtml(resolveImg(filename))}" alt="${escapeHtml(alt)}" loading="${loadingMode}" class="${cls}" onerror="window.handleImgErr(this, '${safeFile}', '${safeAlt}')" />`;
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById("toast-notification");
+      if (!el) return;
+      el.textContent = msg;
+      el.classList.remove("hidden");
+      clearTimeout(el._hideTimer);
+      el._hideTimer = setTimeout(() => el.classList.add("hidden"), 3400);
+    }
+
+    window.scrollToBooking = function() {
+      const target = document.getElementById("booking-slot-active") || document.getElementById("iletisim");
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+    };
+
+    // 3. HEADER SCROLL & MOBİL MENÜ
+    function updateHeaderAppearance() {
+      const header = document.getElementById("main-header");
+      const topBar = document.getElementById("top-info-bar");
+      const subBrand = document.getElementById("header-sub-brand");
+      if (!header) return;
+
+      if (window.scrollY > 60) {
+        header.classList.remove("text-white");
+        header.classList.add("bg-linen/95", "backdrop-blur-md", "text-obsidian", "shadow-sm", "border-b", "border-sandBorder");
+        if (topBar) {
+          topBar.classList.remove("border-white/15");
+          topBar.classList.add("border-sandBorder", "bg-parchment/70", "text-stoneText");
+        }
+        if (subBrand) {
+          subBrand.classList.remove("text-white/75");
+          subBrand.classList.add("text-stoneText");
+        }
+      } else {
+        header.classList.add("text-white");
+        header.classList.remove("bg-linen/95", "backdrop-blur-md", "text-obsidian", "shadow-sm", "border-b", "border-sandBorder");
+        if (topBar) {
+          topBar.classList.add("border-white/15");
+          topBar.classList.remove("border-sandBorder", "bg-parchment/70", "text-stoneText");
+        }
+        if (subBrand) {
+          subBrand.classList.add("text-white/75");
+          subBrand.classList.remove("text-stoneText");
+        }
+      }
+    }
+    window.addEventListener("scroll", updateHeaderAppearance, { passive: true });
+
+    document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+    document.querySelectorAll(".mobile-nav-link").forEach(link => {
+      link.addEventListener("click", () => document.getElementById("mobile-menu").classList.add("hidden"));
+    });
+
+    // 4. TAM EKRAN HERO SLIDER
+    function renderHeroAndHistory() {
+      const h = SITE_DATA.hero;
+      document.getElementById("hero-title").textContent = h.baslik;
+      document.getElementById("hero-subtitle").textContent = h.altBaslik;
+
+      const slides = h.slaytlar && h.slaytlar.length ? h.slaytlar : [{ gorsel: "IMG_1251.JPG.jpg", baslik: "Kars Cumhuriyet Oteli" }];
+      if (currentSlideIdx >= slides.length) currentSlideIdx = 0;
+
+      document.getElementById("hero-slides-container").innerHTML = slides.map((sl, i) => `
+        <div class="hero-slide ${i === currentSlideIdx ? "active" : ""} absolute inset-0 w-full h-full">
+          <div class="hero-slide-img w-full h-full">
+            ${imgTag(sl.gorsel, sl.baslik || "Kars Cumhuriyet Oteli", "w-full h-full object-cover", i === 0 ? "eager" : "lazy")}
+          </div>
+        </div>
+      `).join("");
+
+      document.getElementById("hero-dots").innerHTML = slides.map((_, i) => `
+        <button type="button" aria-label="Slayt ${i + 1}" onclick="goToHeroSlide(${i})" class="h-1.5 transition-all ${i === currentSlideIdx ? "w-8 bg-bronze" : "w-2.5 bg-white/40 hover:bg-white/75"}"></button>
+      `).join("");
+
+      updateHeroSlideMeta();
+      startHeroAutoplay();
+
+      // İstatistikler
+      document.getElementById("hero-stats").innerHTML = (h.istatistikler || []).map(st => `
+        <div>
+          <div class="font-editorial text-2xl sm:text-3xl font-semibold text-obsidian">${escapeHtml(st.deger)}</div>
+          <div class="text-[11px] text-stoneText mt-0.5">${escapeHtml(st.etiket)}</div>
+        </div>
+      `).join("");
+
+      // Tarihçemiz Bölümü
+      const t = SITE_DATA.tarihce;
+      document.getElementById("history-main-photo").innerHTML = imgTag("IMG_0618.JPG.jpg", "Kars Cumhuriyet Oteli Tarihi Arşiv Köşesi");
+      document.getElementById("history-title").textContent = t.baslik;
+      document.getElementById("history-intro").textContent = t.giris;
+      document.getElementById("history-detail").textContent = t.detay;
+      document.getElementById("history-era-1").textContent = t.donem1;
+      document.getElementById("history-era-2").textContent = t.donem2;
+    }
+
+    function updateHeroSlideMeta() {
+      const slides = SITE_DATA.hero.slaytlar || [];
+      if (!slides.length) return;
+      const num = String(currentSlideIdx + 1).padStart(2, "0");
+      const tot = String(slides.length).padStart(2, "0");
+      document.getElementById("hero-counter").textContent = `${num} / ${tot}`;
+      document.getElementById("hero-slide-caption").textContent = slides[currentSlideIdx].baslik || "";
+
+      document.querySelectorAll("#hero-slides-container .hero-slide").forEach((el, idx) => {
+        el.classList.toggle("active", idx === currentSlideIdx);
+      });
+      document.querySelectorAll("#hero-dots button").forEach((btn, idx) => {
+        btn.className = `h-1.5 transition-all ${idx === currentSlideIdx ? "w-8 bg-bronze" : "w-2.5 bg-white/40 hover:bg-white/75"}`;
+      });
+    }
+
+    window.goToHeroSlide = function(idx) {
+      const slides = SITE_DATA.hero.slaytlar || [];
+      if (!slides.length) return;
+      currentSlideIdx = (idx + slides.length) % slides.length;
+      heroProgress = 0;
+      updateHeroSlideMeta();
+    };
+
+    function startHeroAutoplay() {
+      clearInterval(heroTimer);
+      heroProgress = 0;
+      heroTimer = setInterval(() => {
+        heroProgress += 100 / 60; // 6 saniye
+        const bar = document.getElementById("hero-progress-bar");
+        if (bar) bar.style.width = Math.min(100, heroProgress) + "%";
+        if (heroProgress >= 100) {
+          goToHeroSlide(currentSlideIdx + 1);
+        }
+      }, 100);
+    }
+
+    document.getElementById("hero-prev").addEventListener("click", () => goToHeroSlide(currentSlideIdx - 1));
+    document.getElementById("hero-next").addEventListener("click", () => goToHeroSlide(currentSlideIdx + 1));
+
+    // 5. DİNAMİK KONUMLANDIRILABİLİR REZERVASYON ALANI (7 KONUM + ÖZEL KOD)
+    function renderBookingWidget() {
+      const slots = ["after_hero", "after_history", "before_rooms", "after_rooms", "after_guide", "before_contact"];
+      slots.forEach(s => {
+        const el = document.getElementById(`booking-slot-${s}`);
+        if (el) {
+          el.innerHTML = "";
+          el.removeAttribute("data-active-booking");
+        }
+      });
+
+      const rez = SITE_DATA.rezervasyon || { konum: "after_hero", baslik: "Müsaitlik Sorgulama & Rezervasyon", ozelKod: "" };
+      if (!rez.konum || rez.konum === "hidden") return;
+
+      const targetSlot = document.getElementById(`booking-slot-${rez.konum}`);
+      if (!targetSlot) return;
+
+      const hasCustom = rez.ozelKod && rez.ozelKod.trim().length > 0;
+
+      if (hasCustom) {
+        targetSlot.innerHTML = `
+          <section id="booking-slot-active" class="bg-obsidian text-linen border-y border-bronze/40 py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+              <div class="text-xs uppercase tracking-[0.22em] text-bronzeLight mb-4 text-center">${escapeHtml(rez.baslik || "Online Rezervasyon")}</div>
+              <div id="custom-booking-embed-target" class="w-full"></div>
+            </div>
+          </section>
+        `;
+        // Harici script/iframe kodlarını güvenli biçimde çalıştır
+        const embedTarget = document.getElementById("custom-booking-embed-target");
+        const range = document.createRange();
+        range.selectNode(embedTarget);
+        const frag = range.createContextualFragment(rez.ozelKod);
+        embedTarget.appendChild(frag);
+      } else {
+        const today = new Date();
+        const tomorrow = new Date(today.getTime() + 86400000);
+        const d1 = today.toISOString().split("T")[0];
+        const d2 = tomorrow.toISOString().split("T")[0];
+        const roomOpts = (SITE_DATA.odalar || []).map(r => `<option value="${escapeHtml(r.ad)}">${escapeHtml(r.ad)} (${escapeHtml(r.m2)})</option>`).join("");
+
+        targetSlot.innerHTML = `
+          <section id="booking-slot-active" class="bg-obsidian text-linen border-y border-bronze/40 py-8 shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase tracking-[0.22em] text-bronzeLight font-semibold">${escapeHtml(rez.baslik || "Müsaitlik & Hızlı Rezervasyon")}</span>
+                <span class="hidden sm:inline text-[11px] text-linen/60">En İyi Doğrudan Rezervasyon Garantisi</span>
+              </div>
+              <form id="inline-booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                <div class="bg-charcoal border border-white/15 px-3.5 py-2.5">
+                  <label class="block text-[10px] uppercase tracking-wider text-bronzeLight">Giriş Tarihi</label>
+                  <input id="bk-in" type="date" value="${d1}" class="w-full bg-transparent text-white text-xs mt-1 focus:outline-none" />
+                </div>
+                <div class="bg-charcoal border border-white/15 px-3.5 py-2.5">
+                  <label class="block text-[10px] uppercase tracking-wider text-bronzeLight">Çıkış Tarihi</label>
+                  <input id="bk-out" type="date" value="${d2}" class="w-full bg-transparent text-white text-xs mt-1 focus:outline-none" />
+                </div>
+                <div class="bg-charcoal border border-white/15 px-3.5 py-2.5">
+                  <label class="block text-[10px] uppercase tracking-wider text-bronzeLight">Oda Tipi</label>
+                  <select id="bk-room" class="w-full bg-charcoal text-white text-xs mt-1 focus:outline-none">
+                    ${roomOpts}
+                  </select>
+                </div>
+                <div class="bg-charcoal border border-white/15 px-3.5 py-2.5">
+                  <label class="block text-[10px] uppercase tracking-wider text-bronzeLight">Misafir Sayısı</label>
+                  <select id="bk-guests" class="w-full bg-charcoal text-white text-xs mt-1 focus:outline-none">
+                    <option value="1 Yetişkin">1 Yetişkin</option>
+                    <option value="2 Yetişkin" selected>2 Yetişkin</option>
+                    <option value="2 Yetişkin, 1 Çocuk">2 Yetişkin, 1 Çocuk</option>
+                    <option value="3 Yetişkin">3 Yetişkin</option>
+                    <option value="Aile / Grup">Aile / Grup</option>
+                  </select>
+                </div>
+                <button type="submit" class="bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-xs uppercase tracking-[0.16em] font-bold py-4 px-5 transition-colors">
+                  Müsaitlik Sor
+                </button>
+              </form>
+            </div>
+          </section>
+        `;
+
+        const inlineForm = document.getElementById("inline-booking-form");
+        if (inlineForm) {
+          inlineForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const cin = document.getElementById("bk-in").value;
+            const cout = document.getElementById("bk-out").value;
+            const rm = document.getElementById("bk-room").value;
+            const gst = document.getElementById("bk-guests").value;
+            const msg = `Merhaba Kars Cumhuriyet Oteli, web sitenizden müsaitlik sormak istiyorum:%0A• Oda: ${encodeURIComponent(rm)}%0A• Giriş: ${encodeURIComponent(cin)}%0A• Çıkış: ${encodeURIComponent(cout)}%0A• Misafir: ${encodeURIComponent(gst)}`;
+            window.open(`https://wa.me/${SITE_DATA.iletisim.whatsapp}?text=${msg}`, "_blank", "noopener,noreferrer");
+          });
+        }
+      }
+    }
+
+    // 6. ODALARIMIZ & DETAY MODALI
+    function renderRooms() {
+      const grid = document.getElementById("rooms-grid");
+      const qcRoom = document.getElementById("qc-room");
+      const rooms = SITE_DATA.odalar || [];
+
+      grid.innerHTML = rooms.map(r => {
+        const cover = (r.gorseller && r.gorseller[0]) || "IMG_0299.JPG.jpg";
+        const tags = (r.ozellikler || []).slice(0, 4).map(oz => `<span class="px-2.5 py-1 bg-linen border border-sandBorder text-[11px] text-stoneText">${escapeHtml(oz)}</span>`).join("");
+        return `
+          <article class="bg-white border border-sandBorder overflow-hidden flex flex-col group hover:border-bronze transition-colors">
+            <div class="aspect-[16/10] bg-obsidian overflow-hidden relative cursor-pointer" onclick="openRoomModal(${r.id})">
+              ${imgTag(cover, r.ad, "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700")}
+              <div class="absolute top-4 left-4 px-3 py-1 bg-obsidian/85 text-bronzeLight text-[11px] uppercase tracking-widest font-semibold">
+                ${escapeHtml(r.fiyatEtiketi || "Kahvaltı Dahil")}
+              </div>
+              <div class="absolute bottom-4 right-4 px-3 py-1 bg-linen/95 text-obsidian text-xs font-semibold">
+                ${escapeHtml(r.m2)} · ${escapeHtml(r.kapasite)}
+              </div>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-5">
+              <div class="space-y-2.5">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-obsidian">${escapeHtml(r.ad)}</h3>
+                  <span class="text-xs text-bronzeDark font-medium">${escapeHtml(r.yatak)}</span>
+                </div>
+                <p class="text-sm text-stoneText leading-relaxed">${escapeHtml(r.aciklama)}</p>
+              </div>
+              <div class="space-y-4 pt-2">
+                <div class="flex flex-wrap gap-1.5">${tags}</div>
+                <div class="flex items-center gap-3 pt-2 border-t border-sandBorder">
+                  <button type="button" onclick="openRoomModal(${r.id})" class="flex-1 py-3 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold transition-colors">
+                    Odayı İncele & Rezervasyon
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      if (qcRoom) {
+        qcRoom.innerHTML = rooms.map(r => `<option value="${escapeHtml(r.ad)}">${escapeHtml(r.ad)} (${escapeHtml(r.kapasite)})</option>`).join("");
+      }
+    }
+
+    window.openRoomModal = function(roomId) {
+      const room = (SITE_DATA.odalar || []).find(r => r.id === roomId);
+      if (!room) return;
+      const imgs = room.gorseller && room.gorseller.length ? room.gorseller : ["IMG_0299.JPG.jpg"];
+      const modalBody = document.getElementById("room-modal-body");
+
+      modalBody.innerHTML = `
+        <div class="space-y-6">
+          <div id="room-modal-main-img" class="aspect-[16/9] bg-obsidian overflow-hidden border border-sandBorder">
+            ${imgTag(imgs[0], room.ad)}
+          </div>
+          ${imgs.length > 1 ? `
+            <div class="flex gap-2">
+              ${imgs.map(im => `
+                <button type="button" onclick="document.getElementById('room-modal-main-img').innerHTML = imgTag('${escapeHtml(im).replace(/'/g, "\\'")}', '${escapeHtml(room.ad).replace(/'/g, "\\'")}')" class="w-20 h-14 border border-sandBorder hover:border-bronze overflow-hidden">
+                  ${imgTag(im, room.ad)}
+                </button>
+              `).join("")}
+            </div>
+          ` : ""}
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-sandBorder pb-4">
+            <div>
+              <h3 class="font-editorial text-3xl font-semibold text-obsidian">${escapeHtml(room.ad)}</h3>
+              <p class="text-xs text-stoneText mt-1">${escapeHtml(room.m2)} · ${escapeHtml(room.kapasite)} · ${escapeHtml(room.yatak)}</p>
+            </div>
+            <span class="px-3 py-1 bg-parchment border border-sandBorder text-xs font-semibold text-bronzeDark self-start">${escapeHtml(room.fiyatEtiketi)}</span>
+          </div>
+          <p class="text-sm text-charcoal leading-relaxed">${escapeHtml(room.aciklama)}</p>
+          <div>
+            <div class="text-xs uppercase tracking-wider text-stoneText font-semibold mb-2">Oda Donanımları</div>
+            <div class="flex flex-wrap gap-2">
+              ${(room.ozellikler || []).map(o => `<span class="px-3 py-1.5 bg-white border border-sandBorder text-xs text-obsidian">${escapeHtml(o)}</span>`).join("")}
+            </div>
+          </div>
+          <div class="pt-2">
+            <a href="https://wa.me/${SITE_DATA.iletisim.whatsapp}?text=${encodeURIComponent(`Merhaba Kars Cumhuriyet Oteli, ${room.ad} için müsaitlik ve fiyat bilgisi alabilir miyim?`)}" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-xs uppercase tracking-[0.18em] font-semibold flex items-center justify-center gap-2 transition-colors">
+              <span>WhatsApp ile ${escapeHtml(room.ad)} Rezervasyonu Yap</span>
+            </a>
+          </div>
+        </div>
+      `;
+
+      const modal = document.getElementById("room-modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    };
+
+    document.getElementById("room-modal-close").addEventListener("click", () => {
+      const modal = document.getElementById("room-modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    });
+    document.getElementById("room-modal").addEventListener("click", (e) => {
+      if (e.target.id === "room-modal") {
+        e.currentTarget.classList.add("hidden");
+        e.currentTarget.classList.remove("flex");
+      }
+    });
+
+    // 7. OLANAKLAR & KARS REHBERİ
+    function renderAmenitiesAndGuide() {
+      document.getElementById("amenities-grid").innerHTML = (SITE_DATA.olanaklar || []).map(item => `
+        <div class="p-6 bg-charcoal/70 border border-white/10 hover:border-bronze/50 transition-colors space-y-3">
+          <div class="w-10 h-10 border border-bronze/40 flex items-center justify-center text-bronzeLight">
+            <i data-lucide="${escapeHtml(item.ikon || "sparkles")}" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-editorial text-2xl font-semibold text-white">${escapeHtml(item.baslik)}</h3>
+          <p class="text-xs text-linen/75 leading-relaxed">${escapeHtml(item.aciklama)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("guide-grid").innerHTML = (SITE_DATA.rehber || []).map(g => `
+        <div class="p-6 bg-white border border-sandBorder hover:border-bronze transition-colors space-y-2.5">
+          <div class="text-[11px] uppercase tracking-[0.18em] text-bronzeDark font-semibold">${escapeHtml(g.mesafe)}</div>
+          <h3 class="font-editorial text-2xl font-semibold text-obsidian">${escapeHtml(g.baslik)}</h3>
+          <p class="text-xs text-stoneText leading-relaxed">${escapeHtml(g.aciklama)}</p>
+        </div>
+      `).join("");
+    }
+
+    // 8. GALERİ, LIGHTBOX & SSS
+    function renderGalleryAndFaq() {
+      const items = SITE_DATA.galeri || [];
+      const cats = ["Tümü", ...Array.from(new Set(items.map(i => i.kategori).filter(Boolean)))];
+
+      document.getElementById("gallery-filters").innerHTML = cats.map(c => `
+        <button type="button" onclick="setGalleryFilter('${escapeHtml(c).replace(/'/g, "\\'")}')" class="px-4 py-2 text-xs uppercase tracking-wider font-semibold transition-colors ${activeGalleryFilter === c ? "bg-obsidian text-white" : "bg-white text-obsidian border border-sandBorder hover:border-obsidian"}">
+          ${escapeHtml(c)}
+        </button>
+      `).join("");
+
+      const filtered = activeGalleryFilter === "Tümü" ? items : items.filter(i => i.kategori === activeGalleryFilter);
+
+      document.getElementById("gallery-grid").innerHTML = filtered.map((item, idx) => `
+        <div onclick="openLightbox(${idx})" class="group relative aspect-[4/3] bg-obsidian overflow-hidden border border-sandBorder cursor-pointer">
+          ${imgTag(item.gorsel, item.baslik, "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500")}
+          <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
+            <span class="text-[10px] uppercase tracking-widest text-bronzeLight">${escapeHtml(item.kategori)}</span>
+            <div class="font-editorial text-lg text-white leading-snug">${escapeHtml(item.baslik)}</div>
+          </div>
+        </div>
+      `).join("");
+
+      // SSS
+      document.getElementById("faq-list").innerHTML = (SITE_DATA.sss || []).map((f, idx) => `
+        <details class="group bg-white border border-sandBorder" ${idx === 0 ? "open" : ""}>
+          <summary class="px-6 py-4 cursor-pointer list-none flex items-center justify-between gap-4 font-editorial text-xl font-semibold text-obsidian">
+            <span>${escapeHtml(f.soru)}</span>
+            <i data-lucide="plus" class="w-4 h-4 text-bronzeDark shrink-0 group-open:rotate-45 transition-transform"></i>
+          </summary>
+          <div class="px-6 pb-5 text-sm text-stoneText leading-relaxed border-t border-sandBorder/60 pt-3">
+            ${escapeHtml(f.cevap)}
+          </div>
+        </details>
+      `).join("");
+    }
+
+    window.setGalleryFilter = function(cat) {
+      activeGalleryFilter = cat;
+      renderGalleryAndFaq();
+      refreshIcons();
+    };
+
+    window.openLightbox = function(idx) {
+      const items = activeGalleryFilter === "Tümü"
+        ? (SITE_DATA.galeri || [])
+        : (SITE_DATA.galeri || []).filter(i => i.kategori === activeGalleryFilter);
+      if (!items.length) return;
+      lightboxIdx = (idx + items.length) % items.length;
+      const item = items[lightboxIdx];
+      document.getElementById("lightbox-media").innerHTML = imgTag(item.gorsel, item.baslik, "max-h-[75vh] w-auto object-contain border border-white/20");
+      document.getElementById("lightbox-caption").textContent = item.baslik;
+      const lb = document.getElementById("lightbox-modal");
+      lb.classList.remove("hidden");
+      lb.classList.add("flex");
+    };
+
+    function closeLightbox() {
+      const lb = document.getElementById("lightbox-modal");
+      lb.classList.add("hidden");
+      lb.classList.remove("flex");
+    }
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev").addEventListener("click", () => openLightbox(lightboxIdx - 1));
+    document.getElementById("lightbox-next").addEventListener("click", () => openLightbox(lightboxIdx + 1));
+    document.getElementById("lightbox-modal").addEventListener("click", (e) => { if (e.target.id === "lightbox-modal") closeLightbox(); });
+
+    // 9. İLETİŞİM & HIZLI TALEP FORMU
+    function renderContactSection() {
+      const c = SITE_DATA.iletisim;
+      const cleanTel = (c.telefon || "").replace(/\s+/g, "");
+      document.getElementById("header-phone-link").textContent = c.telefon;
+      document.getElementById("header-phone-link").href = `tel:${cleanTel}`;
+      document.getElementById("contact-address").textContent = c.adres;
+      document.getElementById("contact-phone").textContent = c.telefon;
+      document.getElementById("contact-phone").href = `tel:${cleanTel}`;
+      document.getElementById("contact-email").textContent = c.eposta;
+      document.getElementById("contact-email").href = `mailto:${c.eposta}`;
+      document.getElementById("contact-whatsapp-btn").href = `https://wa.me/${c.whatsapp}`;
+      document.getElementById("contact-map-btn").href = c.haritaUrl || "https://maps.google.com/?q=Kars+Cumhuriyet+Oteli";
+    }
+
+    function setDefaultBookingDates() {
+      const today = new Date();
+      const tomorrow = new Date(today.getTime() + 86400000);
+      const cin = document.getElementById("qc-checkin");
+      const cout = document.getElementById("qc-checkout");
+      if (cin && !cin.value) cin.value = today.toISOString().split("T")[0];
+      if (cout && !cout.value) cout.value = tomorrow.toISOString().split("T")[0];
+    }
+
+    document.getElementById("quick-contact-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("qc-name").value.trim();
+      const room = document.getElementById("qc-room").value;
+      const cin = document.getElementById("qc-checkin").value;
+      const cout = document.getElementById("qc-checkout").value;
+      const note = document.getElementById("qc-note").value.trim();
+      const text = `Merhaba Kars Cumhuriyet Oteli,%0A• Ad Soyad: ${encodeURIComponent(name)}%0A• Oda: ${encodeURIComponent(room)}%0A• Giriş: ${encodeURIComponent(cin)}%0A• Çıkış: ${encodeURIComponent(cout)}${note ? `%0A• Not: ${encodeURIComponent(note)}` : ""}`;
+      window.open(`https://wa.me/${SITE_DATA.iletisim.whatsapp}?text=${text}`, "_blank", "noopener,noreferrer");
+    });
+
+    function renderAllPublicSections() {
+      renderHeroAndHistory();
+      renderBookingWidget();
+      renderRooms();
+      renderAmenitiesAndGuide();
+      renderGalleryAndFaq();
+      renderContactSection();
+      refreshIcons();
+    }
+
+    // 10. TANITIM FİLMİ MODALI (tanitim.mp4)
+    const videoModal = document.getElementById("video-modal");
+    const promoPlayer = document.getElementById("promo-video-player");
+    const promoFallback = document.getElementById("promo-video-fallback");
+
+    document.getElementById("btn-open-promo-video").addEventListener("click", () => {
+      promoFallback.classList.add("hidden");
+      videoModal.classList.remove("hidden");
+      videoModal.classList.add("flex");
+      promoPlayer.currentTime = 0;
+      promoPlayer.play().catch(() => {});
+      refreshIcons();
+    });
+
+    promoPlayer.addEventListener("error", () => {
+      promoFallback.classList.remove("hidden");
+      refreshIcons();
+    });
+
+    function closeVideoModal() {
+      promoPlayer.pause();
+      videoModal.classList.add("hidden");
+      videoModal.classList.remove("flex");
+    }
+    document.getElementById("video-modal-close").addEventListener("click", closeVideoModal);
+    videoModal.addEventListener("click", (e) => { if (e.target.id === "video-modal") closeVideoModal(); });
+
+    // 11. GİZLİ YÖNETİM GİRİŞİ (/api/giris — KODDA AÇIK ŞİFRE YOKTUR)
+    function openLoginModal() {
+      if (currentUserRole) {
+        openAdminDrawer(currentUserRole);
+        return;
+      }
+      document.getElementById("login-error").classList.add("hidden");
+      document.getElementById("login-password").value = "";
+      const lm = document.getElementById("login-modal");
+      lm.classList.remove("hidden");
+      lm.classList.add("flex");
+      setTimeout(() => document.getElementById("login-password").focus(), 100);
+    }
+
+    function closeLoginModal() {
+      const lm = document.getElementById("login-modal");
+      lm.classList.add("hidden");
+      lm.classList.remove("flex");
+    }
+    document.getElementById("login-modal-close").addEventListener("click", closeLoginModal);
+
+    // 4 Gizli Giriş Tetikleyicisi: #yonetim, ?yonetim, Ctrl+Shift+E, Footer 5 Tıklama
+    function checkUrlForAdminTrigger() {
+      if (window.location.hash === "#yonetim" || window.location.search.includes("yonetim")) {
+        openLoginModal();
+      }
+    }
+    window.addEventListener("hashchange", checkUrlForAdminTrigger);
+
+    document.addEventListener("keydown", (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "e") {
+        e.preventDefault();
+        openLoginModal();
+      }
+      if (e.key === "Escape") {
+        closeLightbox();
+        closeVideoModal();
+        closeLoginModal();
+      }
+    });
+
+    let footerTapCount = 0;
+    let footerTapTimer = null;
+    document.getElementById("footer-copy").addEventListener("click", () => {
+      footerTapCount++;
+      clearTimeout(footerTapTimer);
+      footerTapTimer = setTimeout(() => { footerTapCount = 0; }, 3000);
+      if (footerTapCount >= 5) {
+        footerTapCount = 0;
+        openLoginModal();
+      }
+    });
+
+    document.getElementById("login-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const rolInput = document.querySelector('input[name="loginRole"]:checked');
+      const rol = rolInput ? rolInput.value : "admin";
+      const sifre = document.getElementById("login-password").value.trim();
+      const errEl = document.getElementById("login-error");
+      const btn = document.getElementById("login-submit-btn");
+
+      errEl.classList.add("hidden");
+      btn.disabled = true;
+      btn.textContent = "Doğrulanıyor...";
+
+      try {
+        const res = await fetch("/api/giris", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ rol, sifre })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.ok) {
+          currentUserRole = data.rol || rol;
+          closeLoginModal();
+          openAdminDrawer(currentUserRole);
+          showToast("Yönetim paneli açıldı.");
+        } else {
+          errEl.textContent = data.mesaj || "Şifre hatalı veya yetkisiz giriş.";
+          errEl.classList.remove("hidden");
+        }
+      } catch (err) {
+        errEl.textContent = "Sunucu doğrulaması yapılamadı. Vercel ortam değişkenlerini (ADMIN_SIFRE / EDITOR_SIFRE) ve api/giris.js dosyasını kontrol edin.";
+        errEl.classList.remove("hidden");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Giriş Yap";
+      }
+    });
+
+    // 12. YÖNETİM PANELİ ÇEKMECESİ & CANLI DÜZENLEME
+    function openAdminDrawer(role) {
+      document.getElementById("admin-role-badge").textContent = role === "admin" ? "Yönetici" : "Editör (Odalar)";
+      document.querySelectorAll(".admin-only-tab").forEach(tabBtn => {
+        tabBtn.classList.toggle("hidden", role !== "admin");
+      });
+
+      populateAdminForms();
+      switchAdminTab("odalar");
+
+      document.getElementById("admin-backdrop").classList.remove("hidden");
+      document.getElementById("admin-drawer").classList.remove("translate-x-full");
+      refreshIcons();
+    }
+
+    function closeAdminDrawer() {
+      document.getElementById("admin-backdrop").classList.add("hidden");
+      document.getElementById("admin-drawer").classList.add("translate-x-full");
+    }
+    document.getElementById("admin-close-btn").addEventListener("click", closeAdminDrawer);
+    document.getElementById("admin-backdrop").addEventListener("click", closeAdminDrawer);
+
+    document.getElementById("btn-logout").addEventListener("click", () => {
+      currentUserRole = null;
+      closeAdminDrawer();
+      showToast("Güvenli çıkış yapıldı.");
+    });
+
+    function switchAdminTab(tabKey) {
+      document.querySelectorAll(".admin-tab-panel").forEach(p => p.classList.add("hidden"));
+      const targetPanel = document.getElementById(`tab-${tabKey}`);
+      if (targetPanel) targetPanel.classList.remove("hidden");
+
+      document.querySelectorAll(".admin-tab-btn").forEach(b => {
+        const active = b.dataset.adminTab === tabKey;
+        b.className = `admin-tab-btn ${b.classList.contains("admin-only-tab") ? "admin-only-tab" : ""} ${b.classList.contains("hidden") ? "hidden" : ""} px-3 py-1.5 text-xs font-semibold ${active ? "bg-obsidian text-white" : "bg-white text-obsidian border border-sandBorder"}`;
+      });
+    }
+
+    document.querySelectorAll(".admin-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => switchAdminTab(btn.dataset.adminTab));
+    });
+
+    function populateAdminForms() {
+      // Hero
+      document.getElementById("inp-hero-title").value = SITE_DATA.hero.baslik || "";
+      document.getElementById("inp-hero-subtitle").value = SITE_DATA.hero.altBaslik || "";
+      renderAdminSlidesList();
+
+      // Rezervasyon
+      document.getElementById("inp-booking-position").value = SITE_DATA.rezervasyon.konum || "after_hero";
+      document.getElementById("inp-booking-title").value = SITE_DATA.rezervasyon.baslik || "";
+      document.getElementById("inp-booking-custom-code").value = SITE_DATA.rezervasyon.ozelKod || "";
+
+      // Tarihçe & SSS
+      document.getElementById("inp-history-title").value = SITE_DATA.tarihce.baslik || "";
+      document.getElementById("inp-history-intro").value = SITE_DATA.tarihce.giris || "";
+      document.getElementById("inp-history-detail").value = SITE_DATA.tarihce.detay || "";
+      renderAdminFaqList();
+
+      // Odalar & Galeri
+      renderAdminRoomsList();
+      renderAdminGalleryList();
+
+      // İletişim
+      document.getElementById("inp-contact-phone").value = SITE_DATA.iletisim.telefon || "";
+      document.getElementById("inp-contact-whatsapp").value = SITE_DATA.iletisim.whatsapp || "";
+      document.getElementById("inp-contact-email").value = SITE_DATA.iletisim.eposta || "";
+      document.getElementById("inp-contact-address").value = SITE_DATA.iletisim.adres || "";
+      document.getElementById("inp-contact-map").value = SITE_DATA.iletisim.haritaUrl || "";
+    }
+
+    // Canlı Input Dinleyicileri
+    document.getElementById("inp-hero-title").addEventListener("input", (e) => { SITE_DATA.hero.baslik = e.target.value; renderHeroAndHistory(); });
+    document.getElementById("inp-hero-subtitle").addEventListener("input", (e) => { SITE_DATA.hero.altBaslik = e.target.value; renderHeroAndHistory(); });
+
+    document.getElementById("inp-booking-position").addEventListener("change", (e) => { SITE_DATA.rezervasyon.konum = e.target.value; renderBookingWidget(); showToast("Rezervasyon konumu güncellendi."); });
+    document.getElementById("inp-booking-title").addEventListener("input", (e) => { SITE_DATA.rezervasyon.baslik = e.target.value; renderBookingWidget(); });
+    document.getElementById("inp-booking-custom-code").addEventListener("input", (e) => { SITE_DATA.rezervasyon.ozelKod = e.target.value; renderBookingWidget(); });
+
+    document.getElementById("inp-history-title").addEventListener("input", (e) => { SITE_DATA.tarihce.baslik = e.target.value; renderHeroAndHistory(); });
+    document.getElementById("inp-history-intro").addEventListener("input", (e) => { SITE_DATA.tarihce.giris = e.target.value; renderHeroAndHistory(); });
+    document.getElementById("inp-history-detail").addEventListener("input", (e) => { SITE_DATA.tarihce.detay = e.target.value; renderHeroAndHistory(); });
+
+    document.getElementById("inp-contact-phone").addEventListener("input", (e) => { SITE_DATA.iletisim.telefon = e.target.value; renderContactSection(); });
+    document.getElementById("inp-contact-whatsapp").addEventListener("input", (e) => { SITE_DATA.iletisim.whatsapp = e.target.value; renderContactSection(); });
+    document.getElementById("inp-contact-email").addEventListener("input", (e) => { SITE_DATA.iletisim.eposta = e.target.value; renderContactSection(); });
+    document.getElementById("inp-contact-address").addEventListener("input", (e) => { SITE_DATA.iletisim.adres = e.target.value; renderContactSection(); });
+    document.getElementById("inp-contact-map").addEventListener("input", (e) => { SITE_DATA.iletisim.haritaUrl = e.target.value; renderContactSection(); });
+
+    // Yönetim: Odalar Listesi
+    function renderAdminRoomsList() {
+      const container = document.getElementById("admin-rooms-list");
+      container.innerHTML = (SITE_DATA.odalar || []).map((r, idx) => `
+        <div class="p-4 bg-white border border-sandBorder space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-obsidian">#${idx + 1} · ${escapeHtml(r.ad)}</span>
+            <button type="button" onclick="deleteRoom(${idx})" class="text-[11px] text-red-600 hover:underline font-semibold">Sil</button>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" value="${escapeHtml(r.ad)}" placeholder="Oda Adı" oninput="updateRoomField(${idx}, 'ad', this.value)" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+            <input type="text" value="${escapeHtml(r.m2)}" placeholder="m²" oninput="updateRoomField(${idx}, 'm2', this.value)" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+            <input type="text" value="${escapeHtml(r.kapasite)}" placeholder="Kapasite" oninput="updateRoomField(${idx}, 'kapasite', this.value)" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+            <input type="text" value="${escapeHtml(r.fiyatEtiketi)}" placeholder="Etiket" oninput="updateRoomField(${idx}, 'fiyatEtiketi', this.value)" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          </div>
+          <input type="text" value="${escapeHtml(r.yatak)}" placeholder="Yatak Tipi" oninput="updateRoomField(${idx}, 'yatak', this.value)" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <input type="text" value="${escapeHtml((r.gorseller || []).join(", "))}" placeholder="Fotoğraf dosya adları (virgülle)" oninput="updateRoomArrayField(${idx}, 'gorseller', this.value)" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <input type="text" value="${escapeHtml((r.ozellikler || []).join(", "))}" placeholder="Özellikler (virgülle)" oninput="updateRoomArrayField(${idx}, 'ozellikler', this.value)" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <textarea rows="2" placeholder="Oda açıklaması" oninput="updateRoomField(${idx}, 'aciklama', this.value)" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs">${escapeHtml(r.aciklama)}</textarea>
+        </div>
+      `).join("");
+    }
+
+    window.updateRoomField = function(idx, key, val) {
+      SITE_DATA.odalar[idx][key] = val;
+      renderRooms();
+      renderBookingWidget();
+    };
+    window.updateRoomArrayField = function(idx, key, val) {
+      SITE_DATA.odalar[idx][key] = val.split(",").map(s => s.trim()).filter(Boolean);
+      renderRooms();
+    };
+    window.deleteRoom = function(idx) {
+      SITE_DATA.odalar.splice(idx, 1);
+      renderAdminRoomsList();
+      renderRooms();
+      renderBookingWidget();
+    };
+    document.getElementById("btn-add-room").addEventListener("click", () => {
+      SITE_DATA.odalar.push({
+        id: Date.now(),
+        ad: "Yeni Butik Oda",
+        m2: "25 m²",
+        kapasite: "2 Yetişkin",
+        yatak: "1 Çift Kişilik Yatak",
+        fiyatEtiketi: "Kahvaltı Dahil",
+        ozellikler: ["Ücretsiz Wi-Fi", "Özel Banyo", "Merkezi Isıtma"],
+        gorseller: ["IMG_0299.JPG.jpg"],
+        aciklama: "Tarihi Baltık taş dokusuyla yenilenen konforlu konaklama odası."
+      });
+      renderAdminRoomsList();
+      renderRooms();
+      renderBookingWidget();
+    });
+
+    // Yönetim: Hero Slaytları
+    function renderAdminSlidesList() {
+      document.getElementById("admin-slides-list").innerHTML = (SITE_DATA.hero.slaytlar || []).map((sl, idx) => `
+        <div class="p-3 bg-white border border-sandBorder space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold">Slayt ${idx + 1}</span>
+            <button type="button" onclick="deleteSlide(${idx})" class="text-red-600 text-[11px] font-semibold">Sil</button>
+          </div>
+          <input type="text" value="${escapeHtml(sl.gorsel)}" placeholder="Dosya adı (örn: IMG_1251.JPG.jpg)" oninput="SITE_DATA.hero.slaytlar[${idx}].gorsel = this.value; renderHeroAndHistory();" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <input type="text" value="${escapeHtml(sl.baslik)}" placeholder="Slayt başlığı" oninput="SITE_DATA.hero.slaytlar[${idx}].baslik = this.value; renderHeroAndHistory();" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+        </div>
+      `).join("");
+    }
+    window.deleteSlide = function(idx) {
+      if (SITE_DATA.hero.slaytlar.length <= 1) return;
+      SITE_DATA.hero.slaytlar.splice(idx, 1);
+      renderAdminSlidesList();
+      renderHeroAndHistory();
+    };
+    document.getElementById("btn-add-slide").addEventListener("click", () => {
+      SITE_DATA.hero.slaytlar.push({ gorsel: "IMG_0616.JPG.jpg", baslik: "Kars Cumhuriyet Oteli" });
+      renderAdminSlidesList();
+      renderHeroAndHistory();
+    });
+
+    // Yönetim: Galeri
+    function renderAdminGalleryList() {
+      document.getElementById("admin-gallery-list").innerHTML = (SITE_DATA.galeri || []).map((g, idx) => `
+        <div class="p-3 bg-white border border-sandBorder space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold">Kare #${idx + 1}</span>
+            <button type="button" onclick="deleteGalleryItem(${idx})" class="text-red-600 text-[11px] font-semibold">Sil</button>
+          </div>
+          <input type="text" value="${escapeHtml(g.gorsel)}" placeholder="Dosya adı" oninput="SITE_DATA.galeri[${idx}].gorsel = this.value; renderGalleryAndFaq();" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <div class="grid grid-cols-2 gap-2">
+            <input type="text" value="${escapeHtml(g.baslik)}" placeholder="Başlık" oninput="SITE_DATA.galeri[${idx}].baslik = this.value; renderGalleryAndFaq();" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+            <input type="text" value="${escapeHtml(g.kategori)}" placeholder="Kategori" oninput="SITE_DATA.galeri[${idx}].kategori = this.value; renderGalleryAndFaq();" class="px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          </div>
+        </div>
+      `).join("");
+    }
+    window.deleteGalleryItem = function(idx) {
+      SITE_DATA.galeri.splice(idx, 1);
+      renderAdminGalleryList();
+      renderGalleryAndFaq();
+      refreshIcons();
+    };
+    document.getElementById("btn-add-gallery").addEventListener("click", () => {
+      SITE_DATA.galeri.push({ gorsel: "IMG_1251.JPG.jpg", baslik: "Yeni Galeri Fotoğrafı", kategori: "Mimari" });
+      renderAdminGalleryList();
+      renderGalleryAndFaq();
+      refreshIcons();
+    });
+
+    // Yönetim: SSS
+    function renderAdminFaqList() {
+      document.getElementById("admin-faq-list").innerHTML = (SITE_DATA.sss || []).map((f, idx) => `
+        <div class="p-3 bg-white border border-sandBorder space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold">Soru #${idx + 1}</span>
+            <button type="button" onclick="deleteFaqItem(${idx})" class="text-red-600 text-[11px] font-semibold">Sil</button>
+          </div>
+          <input type="text" value="${escapeHtml(f.soru)}" oninput="SITE_DATA.sss[${idx}].soru = this.value; renderGalleryAndFaq(); refreshIcons();" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs" />
+          <textarea rows="2" oninput="SITE_DATA.sss[${idx}].cevap = this.value; renderGalleryAndFaq(); refreshIcons();" class="w-full px-2.5 py-1.5 bg-linen border border-sandBorder text-xs">${escapeHtml(f.cevap)}</textarea>
+        </div>
+      `).join("");
+    }
+    window.deleteFaqItem = function(idx) {
+      SITE_DATA.sss.splice(idx, 1);
+      renderAdminFaqList();
+      renderGalleryAndFaq();
+      refreshIcons();
+    };
+    document.getElementById("btn-add-faq").addEventListener("click", () => {
+      SITE_DATA.sss.push({ soru: "Yeni Soru Başlığı?", cevap: "Sorunun cevabını buraya yazın." });
+      renderAdminFaqList();
+      renderGalleryAndFaq();
+      refreshIcons();
+    });
+
+    // Yerel Fotoğraf Önizleme Seçicisi
+    const localImgPicker = document.getElementById("local-img-picker");
+    document.getElementById("btn-local-preview").addEventListener("click", () => localImgPicker.click());
+    localImgPicker.addEventListener("change", (e) => {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+      files.forEach(f => {
+        localImageMap[f.name.trim().toLowerCase()] = URL.createObjectURL(f);
+      });
+      renderAllPublicSections();
+      showToast(`${files.length} yerel fotoğraf sayfada canlı önizleniyor.`);
+    });
+
+    // veri.json İndirme
+    document.getElementById("btn-download-json").addEventListener("click", () => {
+      const blob = new Blob([JSON.stringify(SITE_DATA, null, 2)], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "veri.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("veri.json indirildi! GitHub deponuzun ana dizinine yükleyebilirsiniz.");
+    });
+
+    // Harici veri.json Varsa Otomatik Yükle
+    async function loadExternalVeriJson() {
+      try {
+        const res = await fetch(`veri.json?v=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) return;
+        const json = await res.json();
+        if (json && typeof json === "object") {
+          SITE_DATA = {
+            ...SITE_DATA,
+            ...json,
+            hero: { ...SITE_DATA.hero, ...(json.hero || {}) },
+            tarihce: { ...SITE_DATA.tarihce, ...(json.tarihce || {}) },
+            rezervasyon: { ...SITE_DATA.rezervasyon, ...(json.rezervasyon || {}) },
+            iletisim: { ...SITE_DATA.iletisim, ...(json.iletisim || {}) }
+          };
+          renderAllPublicSections();
+        }
+      } catch (_) {
+        // Henüz veri.json yüklenmemişse varsayılan verilerle sorunsuz devam eder
+      }
+    }
+
+    // 13. WEB FOTOĞRAF KÜÇÜLTÜCÜ ARACI
+    let optimizedFilesList = [];
+    const optimizerModal = document.getElementById("img-optimizer-modal");
+    const optimizerInput = document.getElementById("optimizer-file-input");
+
+    document.getElementById("btn-open-optimizer").addEventListener("click", () => {
+      optimizerModal.classList.remove("hidden");
+      optimizerModal.classList.add("flex");
+      refreshIcons();
+    });
+
+    document.getElementById("close-optimizer-modal").addEventListener("click", () => {
+      optimizerModal.classList.add("hidden");
+      optimizerModal.classList.remove("flex");
+    });
+
+    document.getElementById("btn-select-optimize-files").addEventListener("click", () => optimizerInput.click());
+
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + " B";
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + " KB";
+      return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+    }
+
+    function compressImageFile(file, maxWidth = 1920, quality = 0.82) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          const img = new Image();
+          img.onload = () => {
+            let w = img.width;
+            let h = img.height;
+            if (w > maxWidth) {
+              h = Math.round((h * maxWidth) / w);
+              w = maxWidth;
+            }
+            const canvas = document.createElement("canvas");
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, w, h);
+            canvas.toBlob((blob) => {
+              resolve({
+                name: file.name,
+                originalSize: file.size,
+                newSize: blob ? blob.size : file.size,
+                blob: blob || file
+              });
+            }, "image/jpeg", quality);
+          };
+          img.src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    optimizerInput.addEventListener("change", async (e) => {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+      const statusEl = document.getElementById("optimizer-status");
+      const listEl = document.getElementById("optimizer-results-list");
+      const dlBtn = document.getElementById("btn-download-all-optimized");
+
+      statusEl.classList.remove("hidden");
+      statusEl.textContent = `${files.length} fotoğraf optimize ediliyor...`;
+      listEl.innerHTML = "";
+      optimizedFilesList = [];
+
+      for (const f of files) {
+        const res = await compressImageFile(f, 1920, 0.82);
+        optimizedFilesList.push(res);
+        localImageMap[f.name.trim().toLowerCase()] = URL.createObjectURL(res.blob);
+      }
+
+      const totalOrig = optimizedFilesList.reduce((a, b) => a + b.originalSize, 0);
+      const totalNew = optimizedFilesList.reduce((a, b) => a + b.newSize, 0);
+      const savedPct = totalOrig > 0 ? Math.max(0, Math.round((1 - totalNew / totalOrig) * 100)) : 0;
+
+      statusEl.textContent = `Tamamlandı: ${formatBytes(totalOrig)} → ${formatBytes(totalNew)} (%${savedPct} daha hafif)`;
+      document.getElementById("optimizer-summary").textContent = `${optimizedFilesList.length} dosya GitHub yüklemesine hazır`;
+      dlBtn.disabled = false;
+
+      listEl.innerHTML = optimizedFilesList.map((item, idx) => `
+        <div class="p-3 bg-white border border-sandBorder flex items-center justify-between gap-2 text-xs">
+          <div class="min-w-0">
+            <div class="font-semibold text-obsidian truncate">${escapeHtml(item.name)}</div>
+            <div class="text-[11px] text-stoneText">${formatBytes(item.originalSize)} → <strong class="text-emerald-700">${formatBytes(item.newSize)}</strong></div>
+          </div>
+          <button type="button" data-dl-opt="${idx}" class="px-3 py-1.5 bg-linen border border-sandBorder hover:bg-obsidian hover:text-white font-semibold shrink-0 transition-colors">
+            İndir
+          </button>
+        </div>
+      `).join("");
+
+      listEl.querySelectorAll("[data-dl-opt]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const item = optimizedFilesList[Number(btn.dataset.dlOpt)];
+          if (!item) return;
+          const url = URL.createObjectURL(item.blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = item.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+      });
+
+      renderAllPublicSections();
+    });
+
+    document.getElementById("btn-download-all-optimized").addEventListener("click", () => {
+      optimizedFilesList.forEach((item, idx) => {
+        setTimeout(() => {
+          const url = URL.createObjectURL(item.blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = item.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, idx * 250);
+      });
+      showToast("Küçültülmüş fotoğraflar indiriliyor...");
+    });
+
+    // BAŞLATMA
+    window.addEventListener("DOMContentLoaded", () => {
+      updateHeaderAppearance();
+      setDefaultBookingDates();
+      renderAllPublicSections();
+      checkUrlForAdminTrigger();
+      loadExternalVeriJson();
+    });
+  </script>
+</body>
+</html>
