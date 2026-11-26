@@ -1,0 +1,262 @@
+{
+  "hero": {
+    "baslik": "Kars'ın Kalbinde İki Asırlık Tarihi Zarafet",
+    "altBaslik": "Kazımpaşa Caddesi'nin tarihi dokusunda; Rus dönemi kesme bazalt taş mimarisi ile erken Cumhuriyet döneminin yüksek tavanlı ferah odalarını buluşturan seçkin konaklama deneyimi.",
+    "slaytlar": [
+      {
+        "gorsel": "IMG_1251.JPG.jpg",
+        "baslik": "Tarihi Baltık Taş Cephe & Gece Işıklandırması"
+      },
+      {
+        "gorsel": "IMG_0299.JPG.jpg",
+        "baslik": "Yüksek Tavanlı & Ferah Tarihi Butik Odalar"
+      },
+      {
+        "gorsel": "IMG_0617.JPG.jpg",
+        "baslik": "1941 Cumhuriyet Dönemi Zarafetiyle Karşılama Lobisi"
+      },
+      {
+        "gorsel": "IMG_0615.JPG.jpg",
+        "baslik": "Bazalt Taş Dokulu Kahvaltı & Restoran Salonu"
+      }
+    ],
+    "istatistikler": [
+      {
+        "deger": "1878",
+        "etiket": "Baltık Taş Mimari Mirası"
+      },
+      {
+        "deger": "1941",
+        "etiket": "Cumhuriyet Dönemi Dokusu"
+      },
+      {
+        "deger": "7/24",
+        "etiket": "Kesintisiz Resepsiyon"
+      }
+    ]
+  },
+  "tarihce": {
+    "baslik": "İki Farklı Dönem, Tek Bir Zarafet",
+    "giris": "Kazımpaşa Caddesi üzerinde yükselen yapımız, Kars'ın çok katmanlı mimari hafızasını günümüzün butik konfor standartlarıyla yaşatmaktadır.",
+    "detay": "Zemin katındaki kesme bazalt taş işçiliği ve kemerli pencere oranları 19. yüzyıl sonu Baltık mimari geleneğini yansıtırken; 1941 arşiv kayıtlarıyla belgelenen üst kat dokusu erken Cumhuriyet döneminin sade, aydınlık ve ferah mekan anlayışını taşır.",
+    "donem1": "Kesme bazalt taş duvarlar, yüksek tavan oranları ve kış iklimine meydan okuyan tarihi Baltık zemin mimarisi.",
+    "donem2": "1941 tarihli arşiv belgeleri ışığında korunan aydınlık cephe, geniş pencereler ve erken Cumhuriyet zarafeti."
+  },
+  "rezervasyon": {
+    "konum": "after_hero",
+    "baslik": "Müsaitlik Sorgulama & Hızlı Rezervasyon",
+    "ozelKod": ""
+  },
+  "odalar": [
+    {
+      "id": 1,
+      "ad": "Single Room",
+      "m2": "18 m²",
+      "kapasite": "1 Yetişkin",
+      "yatak": "1 Adet Tek Kişilik Ortopedik Yatak",
+      "fiyatEtiketi": "Yöresel Kahvaltı Dahil",
+      "ozellikler": [
+        "Baltık Taş Doku",
+        "Ücretsiz Wi-Fi",
+        "Akıllı TV",
+        "Özel Banyo",
+        "Merkezi Isıtma"
+      ],
+      "gorseller": [
+        "IMG_0299.JPG.jpg"
+      ],
+      "aciklama": "İş seyahatleri ve bireysel Kars keşifleri için tasarlanmış; yüksek tavanlı, sıcak ve huzurlu tek kişilik butik oda."
+    },
+    {
+      "id": 2,
+      "ad": "Double Room",
+      "m2": "24 m²",
+      "kapasite": "2 Yetişkin",
+      "yatak": "1 Adet Çift Kişilik Queen Yatak",
+      "fiyatEtiketi": "Yöresel Kahvaltı Dahil",
+      "ozellikler": [
+        "Tarihi Kemer Pencere",
+        "Ücretsiz Wi-Fi",
+        "Çay & Kahve Seti",
+        "Özel Banyo",
+        "Merkezi Isıtma"
+      ],
+      "gorseller": [
+        "IMG_0299.JPG.jpg",
+        "IMG_0617.JPG.jpg"
+      ],
+      "aciklama": "Çiftler için ideal, erken Cumhuriyet döneminin ferah pencere oranlarına sahip konforlu çift kişilik konaklama alanı."
+    },
+    {
+      "id": 3,
+      "ad": "King Room",
+      "m2": "30 m²",
+      "kapasite": "2 Yetişkin + 1 Çocuk",
+      "yatak": "1 Adet Geniş King Size Yatak",
+      "fiyatEtiketi": "Geniş Yaşam Alanı",
+      "ozellikler": [
+        "King Size Yatak",
+        "Oturma Köşesi",
+        "Akıllı TV",
+        "Ücretsiz Wi-Fi",
+        "Özel Banyo"
+      ],
+      "gorseller": [
+        "IMG_0299.JPG.jpg",
+        "IMG_0618.JPG.jpg"
+      ],
+      "aciklama": "Ekstra geniş yatak ölçüsü, dinlenme köşesi ve tarihi cephe manzarasıyla uzun konaklamalar için üst düzey rahatlık sunar."
+    },
+    {
+      "id": 4,
+      "ad": "Suite Room",
+      "m2": "42 m²",
+      "kapasite": "3–4 Kişi / Aile",
+      "yatak": "1 King Yatak + Ayrı Oturma Grubu",
+      "fiyatEtiketi": "Özel Tarihi Süit",
+      "ozellikler": [
+        "Ayrı Oturma Alanı",
+        "Kazımpaşa Cad. Manzarası",
+        "Premium İkramlar",
+        "Geniş Banyo",
+        "7/24 Oda Servisi"
+      ],
+      "gorseller": [
+        "IMG_0299.JPG.jpg",
+        "IMG_0615.JPG.jpg"
+      ],
+      "aciklama": "Otelimizin en seçkin köşesinde yer alan, geniş salon bölümü ve tarihi mimari detaylarıyla aileler ve özel misafirler için tasarlanmış süit."
+    }
+  ],
+  "olanaklar": [
+    {
+      "ikon": "wifi",
+      "baslik": "Yüksek Hızlı Wi-Fi",
+      "aciklama": "Tüm odalar ve ortak yaşam alanlarında kesintisiz fiber internet."
+    },
+    {
+      "ikon": "coffee",
+      "baslik": "Yöresel Kars Kahvaltısı",
+      "aciklama": "Kars kaşarı, balı, ketesi ve doğal ürünlerle zengin kahvaltı servisi."
+    },
+    {
+      "ikon": "flame",
+      "baslik": "24 Saat Merkezi Isıtma",
+      "aciklama": "Kars kışında tüm odalarda ideal sıcaklık sunan modern iklimlendirme."
+    },
+    {
+      "ikon": "clock",
+      "baslik": "7/24 Resepsiyon & Karşılama",
+      "aciklama": "Doğu Ekspresi ve gece uçuşlarına uygun kesintisiz resepsiyon."
+    },
+    {
+      "ikon": "car",
+      "baslik": "Ücretsiz Otopark İmkanı",
+      "aciklama": "Misafirlerimize özel güvenli araç park alanı kolaylığı."
+    },
+    {
+      "ikon": "shield-check",
+      "baslik": "Tarihi Koruma & Konfor",
+      "aciklama": "Aslına sadık restore edilmiş taş ve ahşap detaylarla huzurlu uyku."
+    }
+  ],
+  "rehber": [
+    {
+      "mesafe": "5 Dakika Sürüş",
+      "baslik": "Kars Kalesi & Taş Köprü",
+      "aciklama": "12. yüzyıldan günümüze uzanan tarihi kale surları ve Kars Çayı üzerindeki Taş Köprü."
+    },
+    {
+      "mesafe": "Yürüme Mesafesi",
+      "baslik": "Kazımpaşa & Baltık Sokakları",
+      "aciklama": "Otelimizin hemen önünde yer alan 19. yüzyıl kesme taş binalar ve tarihi yürüyüş rotası."
+    },
+    {
+      "mesafe": "45 Dakika",
+      "baslik": "Ani Ören Yeri",
+      "aciklama": "UNESCO Dünya Mirası Listesi'ndeki Orta Çağ medeniyetler başkenti Ani harabeleri."
+    },
+    {
+      "mesafe": "45 Dakika",
+      "baslik": "Çıldır Gölü & Atlı Kızak",
+      "aciklama": "Kış aylarında tamamen buz tutan göl üzerinde atlı kızak ve sarı balık deneyimi."
+    },
+    {
+      "mesafe": "40 Dakika",
+      "baslik": "Sarıkamış Kayak Merkezi",
+      "aciklama": "Kristal kar kalitesi ve sarıçam ormanlarıyla ünlü Türkiye'nin gözde kış merkezi."
+    },
+    {
+      "mesafe": "10 Dakika",
+      "baslik": "Kars Peynir Müzesi & Gastronomi",
+      "aciklama": "Kaz eti, hangel, Kars gravyeri ve yöresel tatların sunulduğu tarihi mekanlar."
+    }
+  ],
+  "galeri": [
+    {
+      "gorsel": "IMG_1251.JPG.jpg",
+      "baslik": "Kars Cumhuriyet Oteli Gece Görünümü",
+      "kategori": "Mimari"
+    },
+    {
+      "gorsel": "WhatsApp Image 2026-11-18 at 17.13.29.jpeg",
+      "baslik": "Kars Kalesi Manzaralı Tarihi Cephe",
+      "kategori": "Dış Cephe"
+    },
+    {
+      "gorsel": "IMG_0299.JPG.jpg",
+      "baslik": "Ahşap Başlıklı Tarihi Butik Oda",
+      "kategori": "Odalar"
+    },
+    {
+      "gorsel": "IMG_0617.JPG.jpg",
+      "baslik": "Karşılama Salonu & Tarihi Kars Tabloları",
+      "kategori": "İç Mekan"
+    },
+    {
+      "gorsel": "IMG_0618.JPG.jpg",
+      "baslik": "1941 Arşiv Fotoğrafları & Pirinç Saat Köşesi",
+      "kategori": "Mimari"
+    },
+    {
+      "gorsel": "IMG_0616.JPG.jpg",
+      "baslik": "Cumhuriyet Oteli Tarihi Giriş Tabelası",
+      "kategori": "Dış Cephe"
+    },
+    {
+      "gorsel": "IMG_0615.JPG.jpg",
+      "baslik": "Bazalt Taş Duvarlı Kahvaltı Salonu",
+      "kategori": "İç Mekan"
+    },
+    {
+      "gorsel": "IMG_0614.JPG.jpg",
+      "baslik": "Restoran & Dinlenme Alanı",
+      "kategori": "İç Mekan"
+    }
+  ],
+  "sss": [
+    {
+      "soru": "Giriş (Check-in) ve çıkış (Check-out) saatleriniz nedir?",
+      "cevap": "Otelimize giriş saati 14:00, çıkış saati 12:00'dir. Doğu Ekspresi veya sabah uçuşu ile erken gelen misafirlerimiz için resepsiyonumuzda ücretsiz bagaj emanet imkanı sunuyoruz."
+    },
+    {
+      "soru": "Konaklama ücretine kahvaltı dahil midir?",
+      "cevap": "Evet, tüm oda konaklamalarımızda Kars kaşarı, balı, tereyağı ve yöresel lezzetlerden oluşan sabah kahvaltımız dahildir."
+    },
+    {
+      "soru": "Doğu Ekspresi tren garına mesafeniz ne kadardır?",
+      "cevap": "Kars Tren Garı otelimize araçla yalnızca 5 dakika (yaklaşık 1,8 km) uzaklıktadır. Resepsiyonumuz transfer konusunda yardımcı olmaktadır."
+    },
+    {
+      "soru": "Kış aylarında odaların ısınma durumu nasıldır?",
+      "cevap": "Tarihi kalın bazalt taş duvarlarımız yüksek ısı yalıtımı sağlarken, tüm odalarımızda 24 saat kesintisiz merkezi ısıtma sistemi bulunmaktadır."
+    }
+  ],
+  "iletisim": {
+    "telefon": "0 554 541 1923",
+    "whatsapp": "905545411923",
+    "eposta": "info@karscumhuriyetoteli.com",
+    "adres": "Yusufpaşa Mah. Kazımpaşa Cad. No:127, Merkez / Kars",
+    "haritaUrl": "https://maps.google.com/?q=Kars+Cumhuriyet+Oteli"
+  }
+}
