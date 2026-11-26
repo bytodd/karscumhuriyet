@@ -844,6 +844,69 @@
         </div>
       </div>
     </div>
+
+    <!-- Yönetim Paneli Alt Aksiyon Çubuğu -->
+    <div class="p-4 bg-parchment border-t border-sandBorder space-y-2.5 shrink-0">
+      <div class="grid grid-cols-2 gap-2">
+        <button id="btn-local-preview" type="button" class="px-3 py-2.5 bg-white hover:bg-linen border border-sandBorder text-obsidian text-[11px] uppercase tracking-wider font-semibold inline-flex items-center justify-center gap-1.5 transition-colors">
+          <i data-lucide="image" class="w-3.5 h-3.5 text-bronzeDark"></i>
+          <span>Fotoğraf Önizle</span>
+        </button>
+        <button id="btn-open-optimizer" type="button" class="px-3 py-2.5 bg-white hover:bg-linen border border-sandBorder text-obsidian text-[11px] uppercase tracking-wider font-semibold inline-flex items-center justify-center gap-1.5 transition-colors">
+          <i data-lucide="minimize-2" class="w-3.5 h-3.5 text-bronzeDark"></i>
+          <span>Fotoğraf Küçült</span>
+        </button>
+      </div>
+      <input id="local-img-picker" type="file" multiple accept="image/*" class="hidden" />
+
+      <button id="btn-download-json" type="button" class="w-full py-3 bg-bronze hover:bg-bronzeDark text-obsidian hover:text-white text-xs uppercase tracking-[0.16em] font-bold inline-flex items-center justify-center gap-2 transition-colors">
+        <i data-lucide="download" class="w-4 h-4"></i>
+        <span>Kaydet ve veri.json İndir</span>
+      </button>
+
+      <button id="btn-logout" type="button" class="w-full py-2 text-[11px] uppercase tracking-wider text-stoneText hover:text-red-700 font-semibold transition-colors">
+        Güvenli Çıkış Yap
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== WEB İÇİN FOTOĞRAF KÜÇÜLTÜCÜ MODALI ==================== -->
+  <div id="img-optimizer-modal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
+    <div class="w-full max-w-2xl bg-linen border border-sandBorder shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
+      <div class="px-6 py-4 bg-obsidian text-white flex items-center justify-between shrink-0">
+        <div>
+          <h3 class="font-editorial text-2xl font-semibold">Web Fotoğraf Küçültücü</h3>
+          <p class="text-[11px] text-bronzeLight mt-0.5">Fotoğrafları kalite kaybı olmadan 1920px web boyutuna (~250 KB) indirir</p>
+        </div>
+        <button id="close-optimizer-modal" type="button" aria-label="Kapat" class="p-1.5 border border-white/20 hover:bg-white/15">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 overflow-y-auto flex-1">
+        <div class="p-5 bg-white border border-dashed border-bronze/60 text-center space-y-3">
+          <p class="text-xs text-stoneText">
+            Bilgisayarınızdaki ham otel fotoğraflarını topluca seçin. Küçültme işlemi tamamen tarayıcınızda yapılır ve dosya adları korunarak <strong>.jpeg</strong> olarak hazırlanır.
+          </p>
+          <button id="btn-select-optimize-files" type="button" class="px-5 py-2.5 bg-obsidian hover:bg-charcoal text-linen text-xs uppercase tracking-[0.16em] font-semibold transition-colors">
+            Küçültülecek Fotoğrafları Seçin
+          </button>
+          <input id="optimizer-file-input" type="file" multiple accept="image/*" class="hidden" />
+          <div id="optimizer-status" class="hidden text-xs font-semibold text-bronzeDark"></div>
+        </div>
+
+        <div id="optimizer-results-list" class="space-y-2"></div>
+      </div>
+
+      <div class="px-6 py-4 bg-parchment border-t border-sandBorder flex items-center justify-between gap-3 shrink-0">
+        <span id="optimizer-summary" class="text-xs text-stoneText font-medium">Henüz fotoğraf seçilmedi</span>
+        <button id="btn-download-all-optimized" type="button" disabled class="px-5 py-2.5 bg-bronze hover:bg-bronzeDark disabled:opacity-40 disabled:cursor-not-allowed text-obsidian hover:text-white text-xs uppercase tracking-[0.16em] font-bold transition-colors">
+          Tümünü İndir
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== KVKK & ÇEREZ POLİTİKASI MODALI ==================== -->
   <div id="legal-modal" class="fixed inset-0 z-[65] hidden items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true">
     <div class="w-full max-w-3xl bg-linen border border-sandBorder shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
@@ -1244,13 +1307,13 @@
 
       if (m.logoUrl && m.logoUrl.trim()) {
         const src = m.logoUrl.startsWith("data:") ? m.logoUrl : resolveImg(m.logoUrl);
-        const logoImg = `<img src="${escapeHtml(src)}" alt="Kars Cumhuriyet Oteli Logo" class="w-full h-full object-contain p-1" />`;
+        const logoImg = `<img src="${escapeHtml(src)}" alt="Kars Cumhuriyet Oteli Logo" class="h-full w-auto max-w-full object-contain" />`;
         if (headerBox) {
-          headerBox.className = "w-12 h-12 flex items-center justify-center overflow-hidden";
+          headerBox.className = "h-12 w-auto max-w-[150px] flex items-center justify-center overflow-hidden";
           headerBox.innerHTML = logoImg;
         }
         if (footerBox) {
-          footerBox.className = "w-11 h-11 flex items-center justify-center overflow-hidden";
+          footerBox.className = "h-11 w-auto max-w-[140px] flex items-center justify-center overflow-hidden";
           footerBox.innerHTML = logoImg;
         }
         if (adminPreview) adminPreview.innerHTML = logoImg;
